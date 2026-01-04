@@ -33,7 +33,7 @@ library(matrixcalc)
 
 ```{r, warning = F, message = F }
 df <- 
-  import("https://github.com/sonsoleslp/labook-data/raw/main/11_universityCovid/data.sav") |>
+  import("../../data-main/11_universityCovid/data.sav") |>
   drop_na()
 ```
 

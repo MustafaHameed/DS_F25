@@ -28,8 +28,8 @@ library(rio)
 
 Import data
 ```{r}
-net_edges <- import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/DLT1%20Edgelist.csv")
-net_nodes <- import("https://raw.githubusercontent.com/lamethods/data/main/6_snaMOOC/DLT1%20Nodes.csv")
+net_edges <- import("../../data-main/6_snaMOOC/DLT1 Edgelist.csv")
+net_nodes <- import("../../data-main/6_snaMOOC/DLT1 Nodes.csv")
 ```
 
 Cleaning column names

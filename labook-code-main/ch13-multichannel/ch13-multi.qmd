@@ -27,7 +27,7 @@ library(WeightedCluster)
 ### The data
 
 ```{r, results=F}
-URL <- "https://github.com/sonsoleslp/labook-data/raw/main/"
+URL <- "../../data-main/"
 fileName <- "9_longitudinalEngagement/SequenceEngagementAchievement.xlsx"
 df <- import(paste0(URL, fileName))
 df

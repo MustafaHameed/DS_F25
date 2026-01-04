@@ -27,7 +27,7 @@ library(TraMineR)
 Download data and create sequence
 
 ```{r}
-URL <- "https://github.com/sonsoleslp/labook-data/raw/main/"
+URL <- "../../data-main/"
 simulated_data <- import(paste0(URL, "12_longitudinalRoles/simulated_roles.csv"))
 
 roles_seq <- seqdef(
