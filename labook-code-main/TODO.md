@@ -8,7 +8,7 @@
 
 ## 🎯 Phase 1: Complete Notebook Execution (15/15 Chapters)
 
-### ✅ COMPLETED (1/15)
+### ✅ COMPLETED (2/15)
 
 - [x] **Ch08: Clustering (Hierarchical)**
   - ✅ Notebook fully executed end-to-end
@@ -19,23 +19,40 @@
   - ✅ All artifacts committed & pushed
   - **Status**: Production-ready example
 
+- [x] **Ch09: Model-Based Clustering (GMM)**
+  - ✅ Notebook fully executed end-to-end
+  - ✅ NaN handling fixed (dropna() applied, removed 3 rows)
+  - ✅ Index alignment fixed (use centralities_clean throughout)
+  - ✅ 3 PNG figures generated (BIC/AIC, probabilities, cluster sizes)
+  - ✅ Comparison with K-means implemented
+  - ✅ PDF handout created (Ch09_ModelBasedClustering_Handout.pdf)
+  - ✅ All artifacts committed & pushed
+  - **Runtime**: ~25 minutes
+  - **Status**: ✅ Complete
+
 ---
 
 ### 🔄 PHASE 2: Quick-Start Chapters (Ch09-11)
 
-#### [ ] **Ch09: Model-Based Clustering (GMM)**
-- [ ] Configure notebook kernel
-- [ ] Run cells 1-3 (setup, packages, environment check)
-- [ ] Execute cell 4 (data loading from Centralities.csv)
-- [ ] Handle any NaN issues (expect similar pattern to Ch08)
-- [ ] Execute cells 5-7 (GMM fitting, visualization)
-- [ ] Validate cluster assignments
-- [ ] Generate PDF handout
-- [ ] Save all artifacts (figures, CSV, PDF)
-- [ ] Commit and push
-- **Expected Runtime**: ~5-10 minutes
-- **Key Metrics**: BIC/AIC comparison, silhouette score
+#### [x] **Ch09: Model-Based Clustering (GMM)** ✅
+- [x] Configure notebook kernel ✅
+- [x] Run cells 1-3 (setup, packages, environment check) ✅
+- [x] Execute cell 4 (data loading from Centralities.csv) ✅
+- [x] Handle any NaN issues (dropna() fixed 3 missing values) ✅
+- [x] Execute cells 5-7 (GMM fitting, visualization) ✅
+- [x] Validate cluster assignments (GMM vs K-means comparison) ✅
+- [x] Generate PDF handout ✅
+- [x] Save all artifacts (figures, CSV, PDF) ✅
+- [x] Commit and push ✅
+- **Actual Runtime**: ~25 minutes (including error fixes)
+- **Key Results**: 
+  - Optimal k=9 (BIC), 10 (AIC)
+  - 99.1% mean assignment probability (very high confidence)
+  - Silhouette Score: 0.3183 (GMM), 0.5004 (K-means)
+  - Davies-Bouldin: 0.9540 (GMM), 0.5677 (K-means)
+  - K-means slightly better on validation metrics
 - **Data**: ✅ Already copied (Centralities.csv)
+- **Status**: ✅ COMPLETE
 
 #### [ ] **Ch10: Sequence Analysis**
 - [ ] Configure notebook kernel
