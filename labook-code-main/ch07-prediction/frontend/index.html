@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Analytics Prediction Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>LA Dashboard</h1>
+                <p>Prediction System</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-view="overview">
+                    <span class="icon">📊</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-view="students">
+                    <span class="icon">👥</span>
+                    <span>Students</span>
+                </a>
+                <a href="#" class="nav-item" data-view="predictions">
+                    <span class="icon">📈</span>
+                    <span>Predictions</span>
+                </a>
+                <a href="#" class="nav-item" data-view="features">
+                    <span class="icon">🔍</span>
+                    <span>Features</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Version 1.0</p>
+                <p>Last Updated: <span id="lastUpdate">Loading...</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 id="viewTitle">Dashboard Overview</h2>
+                <div class="header-actions">
+                    <button class="btn-secondary" onclick="refreshData()">🔄 Refresh</button>
+                    <button class="btn-primary" onclick="exportReport()">📥 Export</button>
+                </div>
+            </header>
+
+            <!-- Overview View -->
+            <div id="overview-view" class="view active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Students</h3>
+                        <p class="stat-value" id="totalStudents">0</p>
+                        <p class="stat-label">Currently enrolled</p>
+                    </div>
+                    <div class="stat-card high-risk">
+                        <h3>High Risk</h3>
+                        <p class="stat-value" id="highRisk">0</p>
+                        <p class="stat-label">Require intervention</p>
+                    </div>
+                    <div class="stat-card medium-risk">
+                        <h3>Medium Risk</h3>
+                        <p class="stat-value" id="mediumRisk">0</p>
+                        <p class="stat-label">Monitor closely</p>
+                    </div>
+                    <div class="stat-card low-risk">
+                        <h3>Low Risk</h3>
+                        <p class="stat-value" id="lowRisk">0</p>
+                        <p class="stat-label">On track</p>
+                    </div>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="chart-card">
+                        <h3>Risk Distribution Timeline</h3>
+                        <div id="riskTimeline"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Activity Heatmap (Last 7 Days)</h3>
+                        <div id="activityHeatmap"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Students View -->
+            <div id="students-view" class="view">
+                <div class="table-controls">
+                    <input type="text" id="searchStudent" placeholder="Search students..." class="search-input">
+                    <select id="riskFilter" class="filter-select">
+                        <option value="all">All Risk Levels</option>
+                        <option value="high">High Risk</option>
+                        <option value="medium">Medium Risk</option>
+                        <option value="low">Low Risk</option>
+                    </select>
+                </div>
+                <div class="table-container">
+                    <table id="studentsTable">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Risk Level</th>
+                                <th>Probability</th>
+                                <th>Activity Score</th>
+                                <th>Last Login</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Predictions View -->
+            <div id="predictions-view" class="view">
+                <div class="chart-grid">
+                    <div class="chart-card full-width">
+                        <h3>Model Performance Over Time</h3>
+                        <div id="modelPerformance"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Prediction Distribution</h3>
+                        <div id="predictionDistribution"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Confusion Matrix</h3>
+                        <div id="confusionMatrix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features View -->
+            <div id="features-view" class="view">
+                <div class="chart-grid">
+                    <div class="chart-card full-width">
+                        <h3>Feature Importance</h3>
+                        <div id="featureImportance"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Feature Correlation Matrix</h3>
+                        <div id="correlationMatrix"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Top Feature Distributions</h3>
+                        <div id="featureDistributions"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/sample_data.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
