@@ -183,6 +183,128 @@ def create_timeline_chart():
     plt.close()
     print(f"Created {output_path}")
 
+def create_ui_mockups():
+    """Generates UI Mockups in sketch style using Matplotlib xkcd()"""
+    
+    # helper for drawing a "UI Window" around a plot
+    def draw_window_frame(ax, title="Moodle Analytics"):
+        # Hide standard axes
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.axis('off')
+        
+        # Draw window border
+        rect = plt.Rectangle((0, 0), 1, 1, transform=ax.transAxes, 
+                            fill=False, color='black', lw=2)
+        ax.add_patch(rect)
+        
+        # Draw title bar
+        header = plt.Rectangle((0, 0.9), 1, 0.1, transform=ax.transAxes, 
+                              fill=True, color='lightgray', ec='black', lw=2)
+        ax.add_patch(header)
+        ax.text(0.02, 0.93, title, transform=ax.transAxes, fontsize=12, fontweight='bold')
+        
+        # Draw "close" buttons
+        ax.text(0.95, 0.93, "X", transform=ax.transAxes, color='red', fontweight='bold')
+        return ax
+
+    # 1. Activity Heatmap
+    with plt.xkcd():
+        fig, ax = plt.subplots(figsize=(8, 6))
+        
+        # Mock Data: 7 days x 24 hours
+        data = np.random.rand(7, 24)
+        
+        cax = ax.imshow(data, cmap='Blues', aspect='auto', interpolation='nearest')
+        
+        ax.set_title("Student Login Activity (Heatmap)")
+        ax.set_xlabel("Hour of Day")
+        ax.set_ylabel("Day of Week")
+        ax.set_yticks(range(7))
+        ax.set_yticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])
+        ax.set_xticks([0, 6, 12, 18, 23])
+        
+        plt.tight_layout()
+        output_path = os.path.join(OUTPUT_DIR, '04_ui_heatmap_mockup.png')
+        plt.savefig(output_path)
+        plt.close()
+        print(f"Created {output_path}")
+
+    # 2. Prediction Timeline (Line Chart)
+    with plt.xkcd():
+        fig, ax = plt.subplots(figsize=(8, 4))
+        
+        weeks = list(range(1, 16))
+        risk_score = [0.2, 0.25, 0.22, 0.3, 0.45, 0.6, 0.75, 0.8, 0.7, 0.65, 0.5, 0.4, 0.3, 0.2, 0.1]
+        
+        ax.plot(weeks, risk_score, 'r-', linewidth=3, label='Dropout Risk')
+        ax.axhline(y=0.5, color='gray', linestyle='--', label='Risk Threshold')
+        
+        ax.set_title("Student Risk Over Semester")
+        ax.set_xlabel("Semester Week")
+        ax.set_ylabel("Predicted Risk Probability")
+        ax.set_ylim(0, 1)
+        ax.legend(loc='upper right')
+        
+        # Annotation example
+        ax.annotate('Midterm\nIntervention!', xy=(7, 0.8), xytext=(9, 0.9),
+                    arrowprops=dict(facecolor='black', shrink=0.05))
+        
+        plt.tight_layout()
+        output_path = os.path.join(OUTPUT_DIR, '05_ui_prediction_timeline.png')
+        plt.savefig(output_path)
+        plt.close()
+        print(f"Created {output_path}")
+
+    # 3. Feature Importance (Bar Chart)
+    with plt.xkcd():
+        fig, ax = plt.subplots(figsize=(8, 5))
+        
+        features = ['Quiz Scores', 'Time Online', 'Forum Posts', 'Late Submissions', 'Clicks']
+        importance = [0.85, 0.6, 0.4, 0.3, 0.1]
+        
+        y_pos = np.arange(len(features))
+        
+        ax.barh(y_pos, importance, align='center', color='teal', alpha=0.6)
+        ax.set_yticks(y_pos)
+        ax.set_yticklabels(features)
+        ax.invert_yaxis()  # labels read top-to-bottom
+        ax.set_xlabel('Model Weight')
+        ax.set_title('Top Predictors of Success')
+        
+        plt.tight_layout()
+        output_path = os.path.join(OUTPUT_DIR, '06_ui_feature_importance.png')
+        plt.savefig(output_path)
+        plt.close()
+        print(f"Created {output_path}")
+
+    # 4. BONUS: Dashboard Grid Layout
+    with plt.xkcd():
+        fig = plt.figure(figsize=(10, 6))
+        ax = fig.add_axes([0, 0, 1, 1])
+        draw_window_frame(ax, "Instructor Dashboard")
+        
+        # Sidebar
+        ax.add_patch(plt.Rectangle((0, 0), 0.2, 0.9, transform=ax.transAxes, fill=False, lw=2))
+        ax.text(0.05, 0.8, "Students", transform=ax.transAxes)
+        ax.text(0.05, 0.7, "Courses", transform=ax.transAxes)
+        ax.text(0.05, 0.6, "Reports", transform=ax.transAxes)
+        
+        # Main Area (Placeholder for charts)
+        ax.add_patch(plt.Rectangle((0.25, 0.5), 0.35, 0.35, transform=ax.transAxes, fill=False, linestyle="--"))
+        ax.text(0.3, 0.65, "[Risk Chart]", transform=ax.transAxes)
+        
+        ax.add_patch(plt.Rectangle((0.65, 0.5), 0.3, 0.35, transform=ax.transAxes, fill=False, linestyle="--"))
+        ax.text(0.7, 0.65, "[Activity]", transform=ax.transAxes)
+        
+        ax.add_patch(plt.Rectangle((0.25, 0.1), 0.7, 0.35, transform=ax.transAxes, fill=False, linestyle="--"))
+        ax.text(0.45, 0.25, "[Student List Table]", transform=ax.transAxes)
+
+        output_path = os.path.join(OUTPUT_DIR, '07_ui_dashboard_wireframe.png')
+        plt.savefig(output_path)
+        plt.close()
+        print(f"Created {output_path}")
+
 if __name__ == '__main__':
     create_context_diagram()
     create_component_diagram()
@@ -190,3 +312,4 @@ if __name__ == '__main__':
     create_erd()
     create_pipeline_diagram()
     create_timeline_chart()
+    create_ui_mockups()
