@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT FYP Portfolio</title>
+    <style>
+        :root {
+            --ink: #14231d;
+            --paper: #f3efe6;
+            --panel: rgba(255, 252, 247, 0.95);
+            --line: #d9d0bf;
+            --green: #0f7a60;
+            --orange: #c15b2f;
+            --gold: #bb8d1f;
+            --muted: #5b6a5f;
+            --shadow: rgba(20, 35, 29, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(15, 122, 96, 0.16), transparent 28%),
+                linear-gradient(180deg, #ebe2d2 0%, var(--paper) 40%, #f8f4ec 100%);
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        }
+
+        .shell {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 28px 18px 40px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+            gap: 20px;
+            padding: 28px;
+            border-radius: 28px;
+            border: 1px solid rgba(217, 208, 191, 0.85);
+            background: linear-gradient(140deg, rgba(255, 252, 247, 0.96), rgba(238, 245, 240, 0.9));
+            box-shadow: 0 24px 64px var(--shadow);
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 4vw, 4.5rem);
+            line-height: 0.94;
+        }
+
+        .hero p {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .hero-side {
+            display: grid;
+            gap: 12px;
+            align-content: start;
+        }
+
+        .hero-chip {
+            padding: 12px 14px;
+            border-radius: 18px;
+            background: rgba(15, 122, 96, 0.08);
+            border: 1px solid rgba(15, 122, 96, 0.15);
+        }
+
+        .section-title {
+            margin: 28px 0 14px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(217, 208, 191, 0.8);
+            background: var(--panel);
+            box-shadow: 0 18px 40px var(--shadow);
+        }
+
+        .card h2,
+        .card h3 {
+            margin: 0;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .live {
+            color: #0a604b;
+            background: rgba(15, 122, 96, 0.14);
+        }
+
+        .queued {
+            color: #815500;
+            background: rgba(187, 141, 31, 0.18);
+        }
+
+        a {
+            color: var(--green);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin: 14px 0 0;
+            padding-left: 18px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1024px) {
+            .hero,
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">BSIT Final Year Project Collection</p>
+                <h1>Machine Learning and Data Science FYP Portfolio</h1>
+                <p>
+                    This portfolio repackages the book/tutorial chapters into project-style deliverables.
+                    Each FYP keeps the original R and Quarto analysis logic as the backend source of truth,
+                    uses local copied datasets, and exposes the results through a project-specific frontend.
+                </p>
+            </div>
+            <div class="hero-side">
+                <div class="hero-chip">Chapters targeted: 07 to 21</div>
+                <div class="hero-chip">Frontend mix: Web + Streamlit</div>
+                <div class="hero-chip">Current live build: Chapter 07</div>
+            </div>
+        </section>
+
+        <h2 class="section-title">Implemented</h2>
+        <div class="grid">
+            <article class="card">
+                <h2>FYP Ch07: Prediction Dashboard</h2>
+                <p>
+                    Early-warning analytics for Moodle learners using behavior features, Random Forest models,
+                    and a browser dashboard.
+                </p>
+                <p><a href="fyp-ch07-prediction/frontend/index.html">Open frontend</a></p>
+                <p><a href="fyp-ch07-prediction/README.md">Open project README</a></p>
+                <span class="status live">Implemented</span>
+            </article>
+        </div>
+
+        <h2 class="section-title">Queued Waves</h2>
+        <div class="grid">
+            <article class="card">
+                <h3>Wave A</h3>
+                <p>Prediction and clustering projects using the shared web-dashboard shell.</p>
+                <ul>
+                    <li>fyp-ch08-clustering</li>
+                    <li>fyp-ch09-model-based-clustering</li>
+                </ul>
+                <span class="status queued">Queued</span>
+            </article>
+
+            <article class="card">
+                <h3>Wave B</h3>
+                <p>Sequence and process-oriented projects, mainly suited to Streamlit-style controls.</p>
+                <ul>
+                    <li>fyp-ch10-sequence-analysis</li>
+                    <li>fyp-ch11-vasstra</li>
+                    <li>fyp-ch12-markov</li>
+                    <li>fyp-ch13-multichannel</li>
+                    <li>fyp-ch14-process-mining</li>
+                </ul>
+                <span class="status queued">Queued</span>
+            </article>
+
+            <article class="card">
+                <h3>Wave C and D</h3>
+                <p>Network, discourse, factor-analysis, and SEM projects.</p>
+                <ul>
+                    <li>fyp-ch15-sna</li>
+                    <li>fyp-ch16-community</li>
+                    <li>fyp-ch17-temporal-networks</li>
+                    <li>fyp-ch18-ena-ona</li>
+                    <li>fyp-ch19-psychological-networks</li>
+                    <li>fyp-ch20-factor-analysis</li>
+                    <li>fyp-ch21-sem</li>
+                </ul>
+                <span class="status queued">Queued</span>
+            </article>
+        </div>
+    </div>
+</body>
+</html>
