@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Network Clustering Studio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">BSIT Final Year Project</p>
+                <h1>Student Network Clustering Studio</h1>
+                <p class="hero-copy">
+                    A Python-first packaging of Chapter 08 that groups students by MOOC network centrality patterns
+                    and lets you test a manual learner profile against the discovered clusters.
+                </p>
+            </div>
+            <div class="hero-meta">
+                <div class="meta-chip">Backend: Python</div>
+                <div class="meta-chip">Frontend: Web Dashboard</div>
+                <div class="meta-chip" id="generatedAt">Waiting for backend output</div>
+            </div>
+        </header>
+
+        <main>
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <h2>Total Nodes</h2>
+                    <p class="stat-value" id="totalNodes">--</p>
+                </article>
+                <article class="stat-card accent-card">
+                    <h2>Feature Count</h2>
+                    <p class="stat-value" id="featureCount">--</p>
+                </article>
+                <article class="stat-card muted-card">
+                    <h2>Chosen Clusters</h2>
+                    <p class="stat-value" id="chosenClusters">--</p>
+                </article>
+                <article class="stat-card muted-card">
+                    <h2>Best Silhouette</h2>
+                    <p class="stat-value" id="bestSilhouette">--</p>
+                </article>
+            </section>
+
+            <section class="panel-grid">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <h2>Cluster Sizes</h2>
+                        <p>Number of nodes discovered in the selected Ward-linkage solution.</p>
+                    </div>
+                    <div class="chart" id="clusterSizeChart"></div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <h2>Validation Metrics</h2>
+                        <p>Silhouette and Davies-Bouldin trends across candidate cluster counts.</p>
+                    </div>
+                    <div class="chart" id="validationChart"></div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading with-controls">
+                        <div>
+                            <h2>Cluster Profile Comparison</h2>
+                            <p>Average centrality values inside the discovered clusters.</p>
+                        </div>
+                        <select id="clusterProfileSelect"></select>
+                    </div>
+                    <div class="chart" id="clusterProfileChart"></div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <h2>Manual Input Demo</h2>
+                        <p>Enter centrality values to see which student-network cluster the new profile resembles.</p>
+                    </div>
+                    <div class="manual-layout">
+                        <form id="manualInputForm" class="input-grid"></form>
+                        <div class="manual-output">
+                            <div class="result-card" id="manualSummary">Awaiting manual input.</div>
+                            <div class="chart compact-chart" id="manualDistanceChart"></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="panel wide-panel">
+                <div class="panel-heading with-controls">
+                    <div>
+                        <h2>Clustered Students</h2>
+                        <p>Search or filter clustered learners from the packaged backend output.</p>
+                    </div>
+                    <div class="table-controls">
+                        <input id="memberSearch" type="search" placeholder="Search by node id">
+                        <select id="memberClusterFilter">
+                            <option value="all">All clusters</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead id="memberTableHead"></thead>
+                        <tbody id="memberTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel status-panel">
+                <h2>Backend Status</h2>
+                <p id="statusMessage">Loading dashboard data...</p>
+            </section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -161,14 +161,14 @@
                 <h1>Machine Learning and Data Science FYP Portfolio</h1>
                 <p>
                     This portfolio repackages the book/tutorial chapters into project-style deliverables.
-                    Each FYP keeps the original R and Quarto analysis logic as the backend source of truth,
-                    uses local copied datasets, and exposes the results through a project-specific frontend.
+                    Each FYP keeps the original QMD chapter as the conceptual source, runs from Python backends,
+                    uses local copied datasets, and exposes the analysis through a project-specific frontend with manual input.
                 </p>
             </div>
             <div class="hero-side">
                 <div class="hero-chip">Chapters targeted: 07 to 21</div>
                 <div class="hero-chip">Backend runtime: Python scripts + notebooks</div>
-                <div class="hero-chip">Frontend mix: Web + Streamlit</div>
+                <div class="hero-chip">Frontend rule: Manual input required</div>
                 <div class="hero-chip">Verified notebook coverage: Chapters 07 to 21</div>
             </div>
         </section>
@@ -186,13 +186,37 @@
                 <p><a href="ch07-prediction/ch07-prediction.ipynb">Open source notebook</a></p>
                 <span class="status live">Implemented</span>
             </article>
+
+            <article class="card">
+                <h2>FYP Ch08: Clustering Studio</h2>
+                <p>
+                    Student-network clustering on Chapter 08 centrality data using a Python hierarchical-clustering backend
+                    and a manual-input web demo for live cluster assignment.
+                </p>
+                <p><a href="fyp-ch08-clustering/frontend/index.html">Open frontend</a></p>
+                <p><a href="fyp-ch08-clustering/README.md">Open project README</a></p>
+                <p><a href="ch08-clustering/ch08-clustering.ipynb">Open source notebook</a></p>
+                <span class="status live">Implemented</span>
+            </article>
+
+            <article class="card">
+                <h2>FYP Ch09: Profile Studio</h2>
+                <p>
+                    QMD-aligned student engagement profiling using a Python Gaussian Mixture backend and
+                    a manual-input web demo for soft profile probabilities.
+                </p>
+                <p><a href="fyp-ch09-model-based-clustering/frontend/index.html">Open frontend</a></p>
+                <p><a href="fyp-ch09-model-based-clustering/README.md">Open project README</a></p>
+                <p><a href="ch09-model-based-clustering/ch09-model-based-clustering.ipynb">Open source notebook</a></p>
+                <span class="status live">Implemented</span>
+            </article>
         </div>
 
         <h2 class="section-title">Python Backend Coverage</h2>
         <div class="grid">
             <article class="card">
                 <h3>Wave A Notebooks</h3>
-                <p>Prediction and clustering backends already exist as Python notebooks.</p>
+                <p>Prediction and clustering backends already exist as Python notebooks, and their FYP packages are now live.</p>
                 <ul>
                     <li><a href="ch07-prediction/ch07-prediction.ipynb">Chapter 07 notebook</a></li>
                     <li><a href="ch08-clustering/ch08-clustering.ipynb">Chapter 08 notebook</a></li>
@@ -230,18 +254,8 @@
         <h2 class="section-title">Queued Waves</h2>
         <div class="grid">
             <article class="card">
-                <h3>Wave A</h3>
-                <p>Prediction and clustering projects using existing Python notebooks as backend sources.</p>
-                <ul>
-                    <li>fyp-ch08-clustering</li>
-                    <li>fyp-ch09-model-based-clustering</li>
-                </ul>
-                <span class="status queued">Queued</span>
-            </article>
-
-            <article class="card">
                 <h3>Wave B</h3>
-                <p>Sequence and process-oriented projects, mainly suited to Streamlit-style controls and notebook-driven backends.</p>
+                <p>Sequence and process-oriented projects with Python-first backends and manual-input frontends.</p>
                 <ul>
                     <li>fyp-ch10-sequence-analysis</li>
                     <li>fyp-ch11-vasstra</li>
@@ -253,14 +267,22 @@
             </article>
 
             <article class="card">
-                <h3>Wave C and D</h3>
-                <p>Network, discourse, factor-analysis, and SEM projects.</p>
+                <h3>Wave C</h3>
+                <p>Network and discourse-oriented projects with graph-heavy outputs and interactive exploration.</p>
                 <ul>
                     <li>fyp-ch15-sna</li>
                     <li>fyp-ch16-community</li>
                     <li>fyp-ch17-temporal-networks</li>
                     <li>fyp-ch18-ena-ona</li>
                     <li>fyp-ch19-psychological-networks</li>
+                </ul>
+                <span class="status queued">Queued</span>
+            </article>
+
+            <article class="card">
+                <h3>Wave D</h3>
+                <p>Factor-analysis and SEM projects with multi-step model interpretation.</p>
+                <ul>
                     <li>fyp-ch20-factor-analysis</li>
                     <li>fyp-ch21-sem</li>
                 </ul>

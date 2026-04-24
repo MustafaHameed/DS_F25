@@ -1,0 +1,3 @@
+cluster,InDegree,OutDegree,Closeness_total,Betweenness,Eigen,Diffusion.degree,Coreness,Cross_clique_connectivity
+1,375.5,81.0,0.0015,37448.0067,0.8496,3958.0,31.0,2524.0
+2,4.0409,5.3795,0.0009,205.7429,0.0386,681.2682,5.9364,41.8909
