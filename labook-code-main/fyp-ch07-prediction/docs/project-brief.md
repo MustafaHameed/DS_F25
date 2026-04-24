@@ -12,15 +12,16 @@ Educational data science and learning analytics.
 
 ## System Summary
 
-The project reads Moodle event logs and assessment results, engineers student-behavior features, trains predictive models across early course weeks, and serves the resulting analytics through a web dashboard.
+The project reads Moodle event logs and assessment results, engineers student-behavior features, trains predictive models across early course weeks through a Python backend translated from the original QMD workflow, and serves the resulting analytics through a web dashboard.
 
 ## Core Modules
 
 1. Data ingestion from local Excel files.
-2. Sessionization and feature engineering in R.
+2. Sessionization and feature engineering in Python.
 3. Weekly classification and regression model training.
 4. Export of dashboard-ready JSON and CSV outputs.
-5. Browser-based visualization for student-risk review.
+5. Jupyter notebook equivalent for interactive analysis.
+6. Browser-based visualization for student-risk review.
 
 ## Deliverables
 

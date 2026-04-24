@@ -1,0 +1,11 @@
+feature,importance,model
+action_cnt_Group_work,0.2539,regression
+session_cnt,0.167,regression
+action_cnt_Materials_Applications,0.1243,regression
+entropy_session_len,0.1208,regression
+action_cnt_Materials_Feedback,0.0625,regression
+action_cnt_Practicals,0.0398,regression
+action_cnt_Social,0.0378,regression
+median_session_len,0.0348,regression
+entropy_daily_cnts,0.0209,regression
+action_cnt_Materials_La_types,0.0168,regression

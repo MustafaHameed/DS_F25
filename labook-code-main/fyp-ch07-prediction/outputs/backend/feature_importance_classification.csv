@@ -1,0 +1,11 @@
+feature,importance,model
+action_cnt_Materials_Applications,0.1299,classification
+entropy_session_len,0.1229,classification
+session_cnt,0.0822,classification
+action_cnt_Course_view,0.064,classification
+action_cnt_Materials_General,0.062,classification
+action_cnt_Materials_La_types,0.0544,classification
+action_cnt_Group_work,0.0516,classification
+entropy_daily_cnts,0.0487,classification
+action_cnt_Assignment,0.0485,classification
+action_cnt_Social,0.0471,classification
