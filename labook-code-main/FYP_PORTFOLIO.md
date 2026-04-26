@@ -38,6 +38,51 @@ The portfolio runtime direction is now Python-first:
 - Frontend: web dashboard with manual engagement input for live profile probability estimation
 - Status: implemented
 
+### Chapter 10
+
+- Folder: `fyp-ch10-sequence-analysis`
+- Theme: Moodle session sequence clustering from Chapter 10 event traces
+- Backend: Python sessionization, sequence encoding, and cluster discovery using the local copied `Events.xlsx`
+- Notebook equivalent: `ch10-sequence-analysis/ch10-sequence-analysis.ipynb`
+- Frontend: web dashboard with manual comma-separated sequence input for live cluster assignment
+- Status: implemented
+
+### Chapter 11
+
+- Folder: `fyp-ch11-vasstra`
+- Theme: longitudinal engagement trajectories from Chapter 11 VaSSTra logic
+- Backend: Python course-wise standardization, Gaussian-mixture state discovery, and trajectory clustering
+- Notebook equivalent: `ch11-vasstra/ch11-vasstra.ipynb`
+- Frontend: web dashboard with eight-step manual state-sequence input
+- Status: implemented
+
+### Chapter 12
+
+- Folder: `fyp-ch12-markov-roles`
+- Theme: learner role transitions and sequence clusters from Chapter 12 Markov analysis
+- Backend: Python observed-transition modeling plus role-sequence mixture clustering on `simulated_roles.csv`
+- Notebook equivalent: `ch12-markov/ch12-markov.ipynb`
+- Frontend: web dashboard with manual 20-step role-path input
+- Status: implemented
+
+### Chapter 13
+
+- Folder: `fyp-ch13-multichannel`
+- Theme: multichannel engagement-achievement trajectories from Chapter 13
+- Backend: Python paired-sequence encoding and six-cluster multichannel trajectory discovery using the local workbook copy
+- Notebook equivalent: `ch13-multichannel/ch13-multichannel.ipynb`
+- Frontend: web dashboard with manual paired engagement and achievement input for all eight sequence steps
+- Status: implemented
+
+### Chapter 14
+
+- Folder: `fyp-ch14-process-mining`
+- Theme: process mining and achiever-group path comparison from Chapter 14
+- Backend: Python event-log sessionization, trimmed process-flow extraction, and high/low achiever path scoring
+- Notebook equivalent: `ch14-process-mining/ch14-process-mining.ipynb`
+- Frontend: web dashboard with manual action-path input scored against group-specific process models
+- Status: implemented
+
 ## Verified Python Coverage
 
 ### Wave A Status
@@ -72,16 +117,18 @@ The portfolio runtime direction is now Python-first:
 ### Wave A
 
 - `fyp-ch07-prediction`, `fyp-ch08-clustering`, and `fyp-ch09-model-based-clustering` are now packaged.
+- Chapter 07 now includes a browser-side manual prediction demo backed by exported Python model coefficients.
 - Chapter 08 uses the existing notebook as a backend starting point and adds a manual-input assignment flow.
 - Chapter 09 corrects notebook/QMD drift by using the original engagement dataset and QMD-aligned variables inside the packaged Python backend.
 
 ### Wave B
 
-- `fyp-ch10-sequence-analysis`
-- `fyp-ch11-vasstra`
-- `fyp-ch12-markov`
-- `fyp-ch13-multichannel`
-- `fyp-ch14-process-mining`
+- `fyp-ch10-sequence-analysis`, `fyp-ch11-vasstra`, `fyp-ch12-markov-roles`, `fyp-ch13-multichannel`, and `fyp-ch14-process-mining` are now packaged and validated.
+- Chapter 10 corrects notebook drift by using the real `Events.xlsx` session traces and adds a manual session-cluster demo.
+- Chapter 11 follows the QMD variables-to-states-to-trajectories flow and adds an eight-step manual state-sequence demo.
+- Chapter 12 uses the real role dataset and exposes a manual 20-step role-path classifier.
+- Chapter 13 uses the real multichannel workbook, not the drifting synthetic notebook data, and adds paired manual state input.
+- Chapter 14 uses the real Moodle event log plus achiever labels and adds a manual action-path scorer.
 
 ### Wave C
 
@@ -110,4 +157,4 @@ Each FYP package should include:
 
 ## Next Target
 
-The next implementation wave should focus on Chapters 10 to 14, keeping the same Python-first rule, QMD-concept fidelity, local dataset copies, and manual-input frontend requirement.
+The next implementation wave should focus on Chapters 15 to 19, keeping the same Python-first rule, QMD-concept fidelity, local dataset copies, and manual-input frontend requirement.

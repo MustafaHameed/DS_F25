@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Process Mining Studio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">BSIT Final Year Project</p>
+                <h1>Learning Process Mining Studio</h1>
+                <p class="hero-copy">
+                    A Python-first Chapter 14 package that sessionizes Moodle events, trims the dominant process flow,
+                    compares high and low achievers, and lets you score a manual action path in the browser.
+                </p>
+            </div>
+            <div class="hero-meta">
+                <div class="meta-chip">Backend: Python</div>
+                <div class="meta-chip">Model: Sessionized Process Mining</div>
+                <div class="meta-chip" id="generatedAt">Waiting for backend output</div>
+            </div>
+        </header>
+
+        <main>
+            <section class="stats-grid">
+                <article class="stat-card"><h2>Total Events</h2><p class="stat-value" id="totalEvents">--</p></article>
+                <article class="stat-card accent-card"><h2>Trimmed Events</h2><p class="stat-value" id="trimmedEvents">--</p></article>
+                <article class="stat-card muted-card"><h2>Total Sessions</h2><p class="stat-value" id="totalSessions">--</p></article>
+                <article class="stat-card muted-card"><h2>Distinct Actions</h2><p class="stat-value" id="distinctActions">--</p></article>
+            </section>
+
+            <section class="panel-grid">
+                <article class="panel"><div class="panel-heading"><h2>Activity Frequency</h2><p>Dominant activities in the trimmed event log.</p></div><div class="chart" id="activityFrequencyChart"></div></article>
+                <article class="panel"><div class="panel-heading"><h2>High vs Low Activity Mix</h2><p>Relative action frequencies per achievement group.</p></div><div class="chart" id="groupFrequencyChart"></div></article>
+                <article class="panel"><div class="panel-heading"><h2>Core Process Flow</h2><p>Top action transitions in the trimmed session process map.</p></div><div class="chart" id="processSankey"></div></article>
+                <article class="panel"><div class="panel-heading"><h2>Group Transition Contrast</h2><p>Most frequent transitions for each achievement group.</p></div><div class="chart" id="groupTransitionChart"></div></article>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading"><h2>Action Catalogue</h2><p>Use these exact action names when testing a manual session path.</p></div>
+                <div class="catalogue" id="actionCatalogue"></div>
+            </section>
+
+            <section class="panel manual-panel">
+                <div class="panel-heading"><h2>Manual Action Path Demo</h2><p>Enter a comma-separated session path to estimate whether it aligns more with high or low achievers.</p></div>
+                <div class="manual-layout">
+                    <div class="manual-inputs">
+                        <label for="manualPath">Action path</label>
+                        <textarea id="manualPath" rows="8"></textarea>
+                        <div class="button-row">
+                            <button id="scoreButton" type="button">Score Path</button>
+                            <button id="resetButton" type="button" class="secondary">Reset Example</button>
+                        </div>
+                    </div>
+                    <div class="manual-output">
+                        <div class="result-card" id="manualSummary">Awaiting manual path input.</div>
+                        <div class="chart compact-chart" id="manualLikelihoodChart"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel wide-panel">
+                <div class="panel-heading with-controls">
+                    <div>
+                        <h2>Session Samples</h2>
+                        <p>Preview of trimmed sessions exported by the Python backend.</p>
+                    </div>
+                    <input id="sampleSearch" type="search" placeholder="Search by user or group">
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Session</th>
+                                <th>User</th>
+                                <th>Group</th>
+                                <th>Events</th>
+                                <th>Action Path</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sampleTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel status-panel"><h2>Backend Status</h2><p id="statusMessage">Loading dashboard data...</p></section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

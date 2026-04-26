@@ -30,13 +30,25 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.metrics import accuracy_score, f1_score, mean_absolute_error, mean_squared_error, precision_score, r2_score, recall_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 
 RSEED = 2023
 TOPICAL_ACTIONS = {"General", "Applications", "Theory", "Ethics", "Feedback", "La_types"}
+MANUAL_FEATURE_LABELS = {
+    "action_cnt_Materials_Applications": "Applications Material Views",
+    "action_cnt_Course_view": "Course Page Views",
+    "action_cnt_Group_work": "Group Work Actions",
+    "action_cnt_Materials_Feedback": "Feedback Material Views",
+    "entropy_session_len": "Session-Length Entropy",
+    "entropy_daily_cnts": "Daily Activity Entropy",
+    "session_cnt": "Session Count",
+    "median_session_len": "Median Session Length (Seconds)",
+}
 
 
 def project_paths() -> dict[str, Path]:
@@ -85,6 +97,99 @@ def round_numeric_columns(dataframe: pd.DataFrame, digits: int = 4) -> pd.DataFr
     numeric_columns = result.select_dtypes(include=[np.number]).columns
     result.loc[:, numeric_columns] = result.loc[:, numeric_columns].round(digits)
     return result
+
+
+def pick_manual_demo_features(
+    classification_importance: pd.DataFrame,
+    regression_importance: pd.DataFrame,
+    max_features: int = 6,
+) -> list[str]:
+    ordered_candidates = pd.concat(
+        [
+            classification_importance["feature"],
+            regression_importance["feature"],
+        ]
+    ).tolist()
+
+    selected: list[str] = []
+    for feature_name in ordered_candidates:
+        if feature_name not in MANUAL_FEATURE_LABELS:
+            continue
+        if feature_name in selected:
+            continue
+        selected.append(feature_name)
+        if len(selected) >= max_features:
+            break
+
+    return selected
+
+
+def build_manual_field_schema(feature_frame: pd.DataFrame, feature_order: list[str]) -> list[dict[str, object]]:
+    schema: list[dict[str, object]] = []
+    for feature_name in feature_order:
+        values = feature_frame[feature_name].astype(float)
+        is_count_feature = feature_name.startswith("action_cnt_") or feature_name.endswith("_cnt")
+        schema.append(
+            {
+                "name": feature_name,
+                "label": MANUAL_FEATURE_LABELS.get(feature_name, feature_name),
+                "default": round(float(values.median()), 2),
+                "min": round(float(values.min()), 2),
+                "max": round(float(values.max()), 2),
+                "step": 1 if is_count_feature else 0.01,
+                "description": f"Observed range: {values.min():.2f} to {values.max():.2f}",
+            }
+        )
+    return schema
+
+
+def fit_manual_demo_models(
+    classification_dataset: pd.DataFrame,
+    regression_dataset: pd.DataFrame,
+    feature_order: list[str],
+) -> tuple[Pipeline, Pipeline]:
+    classification_model = Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+            ("logit", LogisticRegression(random_state=RSEED, max_iter=2000)),
+        ]
+    )
+    classification_model.fit(
+        classification_dataset[feature_order],
+        (classification_dataset["Course_outcome"] == "Low").astype(int),
+    )
+
+    regression_model = Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+            ("ridge", Ridge(alpha=1.0, random_state=RSEED)),
+        ]
+    )
+    regression_model.fit(
+        regression_dataset[feature_order],
+        regression_dataset["Final_grade"],
+    )
+
+    return classification_model, regression_model
+
+
+def serialize_manual_demo_model(model: Pipeline, estimator_step: str) -> dict[str, object]:
+    imputer = model.named_steps["imputer"]
+    scaler = model.named_steps["scaler"]
+    estimator = model.named_steps[estimator_step]
+
+    coefficients = estimator.coef_[0] if estimator_step == "logit" else estimator.coef_
+    intercept = estimator.intercept_[0] if np.ndim(estimator.intercept_) > 0 else float(estimator.intercept_)
+
+    return {
+        "imputer": [round(float(value), 6) for value in imputer.statistics_],
+        "scaler_mean": [round(float(value), 6) for value in scaler.mean_],
+        "scaler_scale": [round(float(value), 6) for value in scaler.scale_],
+        "coefficients": [round(float(value), 6) for value in coefficients],
+        "intercept": round(float(intercept), 6),
+    }
 
 
 def prepare_events(events: pd.DataFrame) -> pd.DataFrame:
@@ -357,6 +462,14 @@ def run_pipeline() -> dict[str, object]:
         "regression",
     )
 
+    manual_feature_order = pick_manual_demo_features(classification_importance, regression_importance)
+    manual_field_schema = build_manual_field_schema(classification_features, manual_feature_order)
+    manual_classification_model, manual_regression_model = fit_manual_demo_models(
+        full_classification_dataset,
+        full_regression_dataset,
+        manual_feature_order,
+    )
+
     count_columns = [column for column in classification_features.columns if column.startswith("action_cnt_")]
     activity_summary = full_classification_dataset[["user", *count_columns]].copy()
     if count_columns:
@@ -446,6 +559,8 @@ def run_pipeline() -> dict[str, object]:
 
     joblib.dump(full_classification_model, paths["models_dir"] / "best_classification_model.joblib")
     joblib.dump(full_regression_model, paths["models_dir"] / "best_regression_model.joblib")
+    joblib.dump(manual_classification_model, paths["models_dir"] / "manual_demo_classification_model.joblib")
+    joblib.dump(manual_regression_model, paths["models_dir"] / "manual_demo_regression_model.joblib")
 
     dashboard_payload = {
         "project": {
@@ -470,6 +585,18 @@ def run_pipeline() -> dict[str, object]:
         "top_features": {
             "classification": json.loads(classification_importance_out.to_json(orient="records")),
             "regression": json.loads(regression_importance_out.to_json(orient="records")),
+        },
+        "manual_demo": {
+            "feature_order": manual_feature_order,
+            "field_schema": manual_field_schema,
+            "classification_model": serialize_manual_demo_model(manual_classification_model, "logit"),
+            "regression_model": serialize_manual_demo_model(manual_regression_model, "ridge"),
+            "cohort": {
+                "average_grade": round(float(full_regression_dataset["Final_grade"].mean()), 2),
+                "median_grade": round(float(full_regression_dataset["Final_grade"].median()), 2),
+                "high_risk_threshold": 0.66,
+                "medium_risk_threshold": 0.33,
+            },
         },
         "students": json.loads(student_predictions_out.to_json(orient="records")),
     }

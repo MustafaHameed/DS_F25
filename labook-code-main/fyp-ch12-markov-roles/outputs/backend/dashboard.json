@@ -1,0 +1,1420 @@
+{
+  "project": {
+    "title": "Role Transition Markov Studio",
+    "generated_at": "2026-04-25 09:07:33",
+    "backend": "Python",
+    "source_chapter": "Chapter 12",
+    "source_qmd": "ch12-markov.qmd",
+    "source_notebook": "ch12-markov.ipynb"
+  },
+  "overview": {
+    "total_learners": 200,
+    "sequence_length": 20,
+    "role_states": 3,
+    "chosen_clusters": 3
+  },
+  "role_states": [
+    "Isolate",
+    "Mediator",
+    "Leader"
+  ],
+  "cluster_metrics": [
+    {
+      "clusters": 2,
+      "bic": -3446.03,
+      "silhouette": 0.2074
+    },
+    {
+      "clusters": 3,
+      "bic": -6446.99,
+      "silhouette": 0.2892
+    },
+    {
+      "clusters": 4,
+      "bic": -8559.95,
+      "silhouette": 0.2839
+    },
+    {
+      "clusters": 5,
+      "bic": -10317.46,
+      "silhouette": 0.2995
+    }
+  ],
+  "overall_transition": {
+    "Isolate": {
+      "Isolate": 0.4231,
+      "Mediator": 0.4782,
+      "Leader": 0.0987
+    },
+    "Mediator": {
+      "Isolate": 0.19,
+      "Mediator": 0.5633,
+      "Leader": 0.2467
+    },
+    "Leader": {
+      "Isolate": 0.0469,
+      "Mediator": 0.4279,
+      "Leader": 0.5252
+    }
+  },
+  "gpa_transitions": {
+    "High": {
+      "Isolate": {
+        "Isolate": 0.3846,
+        "Mediator": 0.543,
+        "Leader": 0.0724
+      },
+      "Mediator": {
+        "Isolate": 0.1928,
+        "Mediator": 0.5284,
+        "Leader": 0.2788
+      },
+      "Leader": {
+        "Isolate": 0.0376,
+        "Mediator": 0.3717,
+        "Leader": 0.5907
+      }
+    },
+    "Low": {
+      "Isolate": {
+        "Isolate": 0.4633,
+        "Mediator": 0.4533,
+        "Leader": 0.0833
+      },
+      "Mediator": {
+        "Isolate": 0.1921,
+        "Mediator": 0.607,
+        "Leader": 0.2009
+      },
+      "Leader": {
+        "Isolate": 0.0487,
+        "Mediator": 0.5393,
+        "Leader": 0.412
+      }
+    },
+    "Middle": {
+      "Isolate": {
+        "Isolate": 0.4093,
+        "Mediator": 0.4517,
+        "Leader": 0.139
+      },
+      "Mediator": {
+        "Isolate": 0.1852,
+        "Mediator": 0.5475,
+        "Leader": 0.2673
+      },
+      "Leader": {
+        "Isolate": 0.0558,
+        "Mediator": 0.4175,
+        "Leader": 0.5267
+      }
+    }
+  },
+  "cluster_profiles": [
+    {
+      "cluster_label": "Isolate/mediator",
+      "size": 75,
+      "prototype_sequence": [
+        "Isolate",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator"
+      ],
+      "dominant_roles": [
+        "Mediator",
+        "Isolate",
+        "Leader"
+      ],
+      "gpa_distribution": {
+        "Low": 0.387,
+        "Middle": 0.373,
+        "High": 0.24
+      },
+      "transition_matrix": {
+        "Isolate": {
+          "Isolate": 0.4426,
+          "Mediator": 0.2249,
+          "Leader": 0.0615
+        },
+        "Mediator": {
+          "Isolate": 0.4731,
+          "Mediator": 0.5759,
+          "Leader": 0.5769
+        },
+        "Leader": {
+          "Isolate": 0.0843,
+          "Mediator": 0.1992,
+          "Leader": 0.3615
+        }
+      }
+    },
+    {
+      "cluster_label": "Mainly leader",
+      "size": 54,
+      "prototype_sequence": [
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Leader",
+        "Mediator",
+        "Leader",
+        "Leader",
+        "Mediator",
+        "Leader",
+        "Leader",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator"
+      ],
+      "dominant_roles": [
+        "Leader",
+        "Mediator",
+        "Isolate"
+      ],
+      "gpa_distribution": {
+        "Low": 0.222,
+        "Middle": 0.315,
+        "High": 0.463
+      },
+      "transition_matrix": {
+        "Isolate": {
+          "Isolate": 0.1458,
+          "Mediator": 0.072,
+          "Leader": 0.0278
+        },
+        "Mediator": {
+          "Isolate": 0.625,
+          "Mediator": 0.5385,
+          "Leader": 0.3183
+        },
+        "Leader": {
+          "Isolate": 0.2292,
+          "Mediator": 0.3896,
+          "Leader": 0.6539
+        }
+      }
+    },
+    {
+      "cluster_label": "Mediator/leader",
+      "size": 71,
+      "prototype_sequence": [
+        "Mediator",
+        "Isolate",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator",
+        "Mediator"
+      ],
+      "dominant_roles": [
+        "Mediator",
+        "Isolate",
+        "Leader"
+      ],
+      "gpa_distribution": {
+        "Low": 0.352,
+        "Middle": 0.324,
+        "High": 0.324
+      },
+      "transition_matrix": {
+        "Isolate": {
+          "Isolate": 0.4393,
+          "Mediator": 0.2193,
+          "Leader": 0.0709
+        },
+        "Mediator": {
+          "Isolate": 0.4623,
+          "Mediator": 0.5642,
+          "Leader": 0.5101
+        },
+        "Leader": {
+          "Isolate": 0.0984,
+          "Mediator": 0.2166,
+          "Leader": 0.4189
+        }
+      }
+    }
+  ],
+  "manual_demo": {
+    "allowed_roles": [
+      "Isolate",
+      "Mediator",
+      "Leader"
+    ],
+    "default_sequence": [
+      "Leader",
+      "Mediator",
+      "Mediator",
+      "Isolate",
+      "Mediator",
+      "Mediator",
+      "Leader",
+      "Leader",
+      "Mediator",
+      "Mediator",
+      "Leader",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator",
+      "Mediator"
+    ],
+    "cluster_models": {
+      "Isolate/mediator": {
+        "prototype_sequence": [
+          "Isolate",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator"
+        ],
+        "transition_matrix": {
+          "Isolate": {
+            "Isolate": 0.4426,
+            "Mediator": 0.2249,
+            "Leader": 0.0615
+          },
+          "Mediator": {
+            "Isolate": 0.4731,
+            "Mediator": 0.5759,
+            "Leader": 0.5769
+          },
+          "Leader": {
+            "Isolate": 0.0843,
+            "Mediator": 0.1992,
+            "Leader": 0.3615
+          }
+        },
+        "gpa_distribution": {
+          "Low": 0.387,
+          "Middle": 0.373,
+          "High": 0.24
+        },
+        "dominant_roles": [
+          "Mediator",
+          "Isolate",
+          "Leader"
+        ]
+      },
+      "Mainly leader": {
+        "prototype_sequence": [
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Leader",
+          "Mediator",
+          "Leader",
+          "Leader",
+          "Mediator",
+          "Leader",
+          "Leader",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator"
+        ],
+        "transition_matrix": {
+          "Isolate": {
+            "Isolate": 0.1458,
+            "Mediator": 0.072,
+            "Leader": 0.0278
+          },
+          "Mediator": {
+            "Isolate": 0.625,
+            "Mediator": 0.5385,
+            "Leader": 0.3183
+          },
+          "Leader": {
+            "Isolate": 0.2292,
+            "Mediator": 0.3896,
+            "Leader": 0.6539
+          }
+        },
+        "gpa_distribution": {
+          "Low": 0.222,
+          "Middle": 0.315,
+          "High": 0.463
+        },
+        "dominant_roles": [
+          "Leader",
+          "Mediator",
+          "Isolate"
+        ]
+      },
+      "Mediator/leader": {
+        "prototype_sequence": [
+          "Mediator",
+          "Isolate",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator",
+          "Mediator"
+        ],
+        "transition_matrix": {
+          "Isolate": {
+            "Isolate": 0.4393,
+            "Mediator": 0.2193,
+            "Leader": 0.0709
+          },
+          "Mediator": {
+            "Isolate": 0.4623,
+            "Mediator": 0.5642,
+            "Leader": 0.5101
+          },
+          "Leader": {
+            "Isolate": 0.0984,
+            "Mediator": 0.2166,
+            "Leader": 0.4189
+          }
+        },
+        "gpa_distribution": {
+          "Low": 0.352,
+          "Middle": 0.324,
+          "High": 0.324
+        },
+        "dominant_roles": [
+          "Mediator",
+          "Isolate",
+          "Leader"
+        ]
+      }
+    }
+  },
+  "samples": [
+    {
+      "ID": 1,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 2,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 3,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 4,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 5,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 6,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 7,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 8,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 9,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate"
+    },
+    {
+      "ID": 10,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 11,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 12,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 13,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 14,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator"
+    },
+    {
+      "ID": 15,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 16,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Leader -> Mediator -> Leader -> Isolate -> Leader -> Isolate -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 17,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate"
+    },
+    {
+      "ID": 18,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 19,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 20,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 21,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 22,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator"
+    },
+    {
+      "ID": 23,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 24,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Leader"
+    },
+    {
+      "ID": 25,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 26,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 27,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator"
+    },
+    {
+      "ID": 28,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 29,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate"
+    },
+    {
+      "ID": 30,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 31,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 32,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 33,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Leader -> Isolate"
+    },
+    {
+      "ID": 34,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 35,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 36,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 37,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 38,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 39,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Leader -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 40,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Isolate -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Isolate"
+    },
+    {
+      "ID": 41,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 42,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 43,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 44,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 45,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 46,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 47,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator"
+    },
+    {
+      "ID": 48,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 49,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 50,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 51,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 52,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 53,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 54,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate"
+    },
+    {
+      "ID": 55,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Isolate -> Leader -> Leader"
+    },
+    {
+      "ID": 56,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 57,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 58,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Isolate -> Leader"
+    },
+    {
+      "ID": 59,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Isolate"
+    },
+    {
+      "ID": 60,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 61,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 62,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 63,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 64,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Leader -> Mediator -> Isolate -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 65,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 66,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 67,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 68,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 69,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Mediator"
+    },
+    {
+      "ID": 70,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 71,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 72,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate"
+    },
+    {
+      "ID": 73,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate"
+    },
+    {
+      "ID": 74,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Mediator"
+    },
+    {
+      "ID": 75,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 76,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 77,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 78,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 79,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 80,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Isolate -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 81,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 82,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Isolate -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 83,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 84,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Isolate -> Leader -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 85,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 86,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Isolate -> Leader"
+    },
+    {
+      "ID": 87,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 88,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate"
+    },
+    {
+      "ID": 89,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 90,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 91,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 92,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 93,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Leader -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 94,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 95,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 96,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 97,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 98,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 99,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 100,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 101,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 102,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 103,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator"
+    },
+    {
+      "ID": 104,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 105,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 106,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 107,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator"
+    },
+    {
+      "ID": 108,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 109,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader"
+    },
+    {
+      "ID": 110,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Isolate -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Leader"
+    },
+    {
+      "ID": 111,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 112,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 113,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 114,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 115,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 116,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 117,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate"
+    },
+    {
+      "ID": 118,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 119,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 120,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 121,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 122,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator"
+    },
+    {
+      "ID": 123,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader"
+    },
+    {
+      "ID": 124,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 125,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate"
+    },
+    {
+      "ID": 126,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 127,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate"
+    },
+    {
+      "ID": 128,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 129,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader"
+    },
+    {
+      "ID": 130,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 131,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator"
+    },
+    {
+      "ID": 132,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 133,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 134,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator"
+    },
+    {
+      "ID": 135,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 136,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 137,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 138,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 139,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 140,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Leader -> Mediator -> Leader -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Isolate"
+    },
+    {
+      "ID": 141,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Isolate -> Isolate -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 142,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 143,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Leader -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator"
+    },
+    {
+      "ID": 144,
+      "GPA": "High",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate"
+    },
+    {
+      "ID": 145,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Leader -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 146,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate"
+    },
+    {
+      "ID": 147,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 148,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Leader"
+    },
+    {
+      "ID": 149,
+      "GPA": "Low",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Leader -> Leader -> Isolate -> Isolate -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Isolate"
+    },
+    {
+      "ID": 150,
+      "GPA": "High",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Isolate -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 151,
+      "GPA": "Low",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 152,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Leader -> Leader"
+    },
+    {
+      "ID": 153,
+      "GPA": "Middle",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Isolate -> Leader -> Leader -> Leader -> Isolate -> Mediator -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 154,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Mediator -> Isolate -> Mediator -> Leader -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 155,
+      "GPA": "High",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Mediator -> Leader -> Mediator -> Mediator -> Mediator -> Isolate -> Isolate -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Leader -> Leader -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 156,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Leader -> Leader -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Mediator -> Mediator -> Leader -> Mediator -> Mediator"
+    },
+    {
+      "ID": 157,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator"
+    },
+    {
+      "ID": 158,
+      "GPA": "Low",
+      "cluster_label": "Isolate/mediator",
+      "sequence_preview": "Isolate -> Isolate -> Isolate -> Mediator -> Mediator -> Isolate -> Isolate -> Isolate -> Mediator -> Isolate -> Leader -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Isolate -> Mediator -> Mediator -> Leader"
+    },
+    {
+      "ID": 159,
+      "GPA": "Middle",
+      "cluster_label": "Mediator/leader",
+      "sequence_preview": "Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Isolate -> Mediator -> Isolate -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Mediator -> Leader -> Leader -> Mediator"
+    },
+    {
+      "ID": 160,
+      "GPA": "Middle",
+      "cluster_label": "Mainly leader",
+      "sequence_preview": "Leader -> Mediator -> Mediator -> Mediator -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Isolate -> Leader -> Leader -> Leader -> Mediator -> Mediator -> Leader -> Leader -> Leader -> Mediator -> Leader"
+    }
+  ]
+}

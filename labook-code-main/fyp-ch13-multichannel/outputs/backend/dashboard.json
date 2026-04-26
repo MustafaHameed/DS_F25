@@ -1,0 +1,1614 @@
+{
+  "project": {
+    "title": "Multichannel Learning Trajectory Studio",
+    "generated_at": "2026-04-25 09:12:07",
+    "backend": "Python",
+    "source_chapter": "Chapter 13",
+    "source_qmd": "ch13-multi.qmd",
+    "source_notebook": "ch13-multichannel.ipynb"
+  },
+  "overview": {
+    "total_records": 1136,
+    "unique_students": 142,
+    "sequence_length": 8,
+    "chosen_clusters": 6
+  },
+  "engagement_states": [
+    "Active",
+    "Average",
+    "Disengaged"
+  ],
+  "achievement_states": [
+    "Achiever",
+    "Intermediate",
+    "Low"
+  ],
+  "engagement_distribution": [
+    {
+      "Sequence": 1,
+      "Engagement": "Active",
+      "count": 41,
+      "proportion": 0.2887323944
+    },
+    {
+      "Sequence": 1,
+      "Engagement": "Average",
+      "count": 68,
+      "proportion": 0.4788732394
+    },
+    {
+      "Sequence": 1,
+      "Engagement": "Disengaged",
+      "count": 33,
+      "proportion": 0.2323943662
+    },
+    {
+      "Sequence": 2,
+      "Engagement": "Active",
+      "count": 47,
+      "proportion": 0.3309859155
+    },
+    {
+      "Sequence": 2,
+      "Engagement": "Average",
+      "count": 62,
+      "proportion": 0.4366197183
+    },
+    {
+      "Sequence": 2,
+      "Engagement": "Disengaged",
+      "count": 33,
+      "proportion": 0.2323943662
+    },
+    {
+      "Sequence": 3,
+      "Engagement": "Active",
+      "count": 42,
+      "proportion": 0.2957746479
+    },
+    {
+      "Sequence": 3,
+      "Engagement": "Average",
+      "count": 67,
+      "proportion": 0.4718309859
+    },
+    {
+      "Sequence": 3,
+      "Engagement": "Disengaged",
+      "count": 33,
+      "proportion": 0.2323943662
+    },
+    {
+      "Sequence": 4,
+      "Engagement": "Active",
+      "count": 41,
+      "proportion": 0.2887323944
+    },
+    {
+      "Sequence": 4,
+      "Engagement": "Average",
+      "count": 74,
+      "proportion": 0.5211267606
+    },
+    {
+      "Sequence": 4,
+      "Engagement": "Disengaged",
+      "count": 27,
+      "proportion": 0.1901408451
+    },
+    {
+      "Sequence": 5,
+      "Engagement": "Active",
+      "count": 43,
+      "proportion": 0.3028169014
+    },
+    {
+      "Sequence": 5,
+      "Engagement": "Average",
+      "count": 70,
+      "proportion": 0.4929577465
+    },
+    {
+      "Sequence": 5,
+      "Engagement": "Disengaged",
+      "count": 29,
+      "proportion": 0.2042253521
+    },
+    {
+      "Sequence": 6,
+      "Engagement": "Active",
+      "count": 41,
+      "proportion": 0.2887323944
+    },
+    {
+      "Sequence": 6,
+      "Engagement": "Average",
+      "count": 68,
+      "proportion": 0.4788732394
+    },
+    {
+      "Sequence": 6,
+      "Engagement": "Disengaged",
+      "count": 33,
+      "proportion": 0.2323943662
+    },
+    {
+      "Sequence": 7,
+      "Engagement": "Active",
+      "count": 44,
+      "proportion": 0.3098591549
+    },
+    {
+      "Sequence": 7,
+      "Engagement": "Average",
+      "count": 66,
+      "proportion": 0.4647887324
+    },
+    {
+      "Sequence": 7,
+      "Engagement": "Disengaged",
+      "count": 32,
+      "proportion": 0.2253521127
+    },
+    {
+      "Sequence": 8,
+      "Engagement": "Active",
+      "count": 41,
+      "proportion": 0.2887323944
+    },
+    {
+      "Sequence": 8,
+      "Engagement": "Average",
+      "count": 70,
+      "proportion": 0.4929577465
+    },
+    {
+      "Sequence": 8,
+      "Engagement": "Disengaged",
+      "count": 31,
+      "proportion": 0.2183098592
+    }
+  ],
+  "achievement_distribution": [
+    {
+      "Sequence": 1,
+      "Achievement": "Achiever",
+      "count": 53,
+      "proportion": 0.3732394366
+    },
+    {
+      "Sequence": 1,
+      "Achievement": "Intermediate",
+      "count": 33,
+      "proportion": 0.2323943662
+    },
+    {
+      "Sequence": 1,
+      "Achievement": "Low",
+      "count": 56,
+      "proportion": 0.3943661972
+    },
+    {
+      "Sequence": 2,
+      "Achievement": "Achiever",
+      "count": 56,
+      "proportion": 0.3943661972
+    },
+    {
+      "Sequence": 2,
+      "Achievement": "Intermediate",
+      "count": 35,
+      "proportion": 0.2464788732
+    },
+    {
+      "Sequence": 2,
+      "Achievement": "Low",
+      "count": 51,
+      "proportion": 0.3591549296
+    },
+    {
+      "Sequence": 3,
+      "Achievement": "Achiever",
+      "count": 57,
+      "proportion": 0.4014084507
+    },
+    {
+      "Sequence": 3,
+      "Achievement": "Intermediate",
+      "count": 25,
+      "proportion": 0.176056338
+    },
+    {
+      "Sequence": 3,
+      "Achievement": "Low",
+      "count": 60,
+      "proportion": 0.4225352113
+    },
+    {
+      "Sequence": 4,
+      "Achievement": "Achiever",
+      "count": 59,
+      "proportion": 0.4154929577
+    },
+    {
+      "Sequence": 4,
+      "Achievement": "Intermediate",
+      "count": 39,
+      "proportion": 0.2746478873
+    },
+    {
+      "Sequence": 4,
+      "Achievement": "Low",
+      "count": 44,
+      "proportion": 0.3098591549
+    },
+    {
+      "Sequence": 5,
+      "Achievement": "Achiever",
+      "count": 53,
+      "proportion": 0.3732394366
+    },
+    {
+      "Sequence": 5,
+      "Achievement": "Intermediate",
+      "count": 27,
+      "proportion": 0.1901408451
+    },
+    {
+      "Sequence": 5,
+      "Achievement": "Low",
+      "count": 62,
+      "proportion": 0.4366197183
+    },
+    {
+      "Sequence": 6,
+      "Achievement": "Achiever",
+      "count": 56,
+      "proportion": 0.3943661972
+    },
+    {
+      "Sequence": 6,
+      "Achievement": "Intermediate",
+      "count": 26,
+      "proportion": 0.1830985915
+    },
+    {
+      "Sequence": 6,
+      "Achievement": "Low",
+      "count": 60,
+      "proportion": 0.4225352113
+    },
+    {
+      "Sequence": 7,
+      "Achievement": "Achiever",
+      "count": 54,
+      "proportion": 0.3802816901
+    },
+    {
+      "Sequence": 7,
+      "Achievement": "Intermediate",
+      "count": 49,
+      "proportion": 0.3450704225
+    },
+    {
+      "Sequence": 7,
+      "Achievement": "Low",
+      "count": 39,
+      "proportion": 0.2746478873
+    },
+    {
+      "Sequence": 8,
+      "Achievement": "Achiever",
+      "count": 58,
+      "proportion": 0.4084507042
+    },
+    {
+      "Sequence": 8,
+      "Achievement": "Intermediate",
+      "count": 31,
+      "proportion": 0.2183098592
+    },
+    {
+      "Sequence": 8,
+      "Achievement": "Low",
+      "count": 53,
+      "proportion": 0.3732394366
+    }
+  ],
+  "cluster_validation": [
+    {
+      "clusters": 2,
+      "silhouette": 0.1195
+    },
+    {
+      "clusters": 3,
+      "silhouette": 0.1257
+    },
+    {
+      "clusters": 4,
+      "silhouette": 0.1283
+    },
+    {
+      "clusters": 5,
+      "silhouette": 0.1266
+    },
+    {
+      "clusters": 6,
+      "silhouette": 0.121
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_raw": 2,
+      "size": 22,
+      "mean_final_grade": 78.58,
+      "mean_engagement_score": 2.852,
+      "mean_achievement_score": 2.96,
+      "prototype_engagement": [
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active"
+      ],
+      "prototype_achievement": [
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever"
+      ],
+      "dominant_combined_states": [
+        "Active | Achiever",
+        "Average | Achiever",
+        "Active | Intermediate"
+      ],
+      "cluster_id": 1,
+      "cluster_label": "Cluster 1"
+    },
+    {
+      "cluster_raw": 3,
+      "size": 15,
+      "mean_final_grade": 73.3,
+      "mean_engagement_score": 2.467,
+      "mean_achievement_score": 2.567,
+      "prototype_engagement": [
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Average",
+        "Average",
+        "Average",
+        "Average"
+      ],
+      "prototype_achievement": [
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Intermediate",
+        "Achiever",
+        "Achiever"
+      ],
+      "dominant_combined_states": [
+        "Active | Achiever",
+        "Average | Achiever",
+        "Average | Intermediate"
+      ],
+      "cluster_id": 2,
+      "cluster_label": "Cluster 2"
+    },
+    {
+      "cluster_raw": 0,
+      "size": 46,
+      "mean_final_grade": 66.14,
+      "mean_engagement_score": 2.043,
+      "mean_achievement_score": 1.823,
+      "prototype_engagement": [
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average"
+      ],
+      "prototype_achievement": [
+        "Low",
+        "Intermediate",
+        "Low",
+        "Intermediate",
+        "Low",
+        "Low",
+        "Intermediate",
+        "Intermediate"
+      ],
+      "dominant_combined_states": [
+        "Average | Intermediate",
+        "Average | Low",
+        "Active | Intermediate"
+      ],
+      "cluster_id": 3,
+      "cluster_label": "Cluster 3"
+    },
+    {
+      "cluster_raw": 5,
+      "size": 19,
+      "mean_final_grade": 75.42,
+      "mean_engagement_score": 2.013,
+      "mean_achievement_score": 2.789,
+      "prototype_engagement": [
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average"
+      ],
+      "prototype_achievement": [
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever",
+        "Achiever"
+      ],
+      "dominant_combined_states": [
+        "Average | Achiever",
+        "Average | Intermediate",
+        "Active | Achiever"
+      ],
+      "cluster_id": 4,
+      "cluster_label": "Cluster 4"
+    },
+    {
+      "cluster_raw": 4,
+      "size": 16,
+      "mean_final_grade": 60.24,
+      "mean_engagement_score": 1.992,
+      "mean_achievement_score": 1.172,
+      "prototype_engagement": [
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average",
+        "Average"
+      ],
+      "prototype_achievement": [
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "dominant_combined_states": [
+        "Average | Low",
+        "Disengaged | Low",
+        "Average | Intermediate"
+      ],
+      "cluster_id": 5,
+      "cluster_label": "Cluster 5"
+    },
+    {
+      "cluster_raw": 1,
+      "size": 24,
+      "mean_final_grade": 58.89,
+      "mean_engagement_score": 1.302,
+      "mean_achievement_score": 1.141,
+      "prototype_engagement": [
+        "Disengaged",
+        "Disengaged",
+        "Disengaged",
+        "Disengaged",
+        "Disengaged",
+        "Disengaged",
+        "Disengaged",
+        "Disengaged"
+      ],
+      "prototype_achievement": [
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "dominant_combined_states": [
+        "Disengaged | Low",
+        "Average | Low",
+        "Disengaged | Intermediate"
+      ],
+      "cluster_id": 6,
+      "cluster_label": "Cluster 6"
+    }
+  ],
+  "manual_demo": {
+    "field_schema": [
+      {
+        "step": 1,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 2,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 3,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 4,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 5,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 6,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 7,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      },
+      {
+        "step": 8,
+        "default_engagement": "Active",
+        "default_achievement": "Achiever"
+      }
+    ],
+    "profiles": {
+      "Cluster 1": {
+        "prototype_engagement": [
+          "Active",
+          "Active",
+          "Active",
+          "Active",
+          "Active",
+          "Active",
+          "Active",
+          "Active"
+        ],
+        "prototype_achievement": [
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever"
+        ],
+        "dominant_combined_states": [
+          "Active | Achiever",
+          "Average | Achiever",
+          "Active | Intermediate"
+        ],
+        "mean_final_grade": 78.58
+      },
+      "Cluster 2": {
+        "prototype_engagement": [
+          "Active",
+          "Active",
+          "Active",
+          "Active",
+          "Average",
+          "Average",
+          "Average",
+          "Average"
+        ],
+        "prototype_achievement": [
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Intermediate",
+          "Achiever",
+          "Achiever"
+        ],
+        "dominant_combined_states": [
+          "Active | Achiever",
+          "Average | Achiever",
+          "Average | Intermediate"
+        ],
+        "mean_final_grade": 73.3
+      },
+      "Cluster 3": {
+        "prototype_engagement": [
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average"
+        ],
+        "prototype_achievement": [
+          "Low",
+          "Intermediate",
+          "Low",
+          "Intermediate",
+          "Low",
+          "Low",
+          "Intermediate",
+          "Intermediate"
+        ],
+        "dominant_combined_states": [
+          "Average | Intermediate",
+          "Average | Low",
+          "Active | Intermediate"
+        ],
+        "mean_final_grade": 66.14
+      },
+      "Cluster 4": {
+        "prototype_engagement": [
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average"
+        ],
+        "prototype_achievement": [
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever",
+          "Achiever"
+        ],
+        "dominant_combined_states": [
+          "Average | Achiever",
+          "Average | Intermediate",
+          "Active | Achiever"
+        ],
+        "mean_final_grade": 75.42
+      },
+      "Cluster 5": {
+        "prototype_engagement": [
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average",
+          "Average"
+        ],
+        "prototype_achievement": [
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        "dominant_combined_states": [
+          "Average | Low",
+          "Disengaged | Low",
+          "Average | Intermediate"
+        ],
+        "mean_final_grade": 60.24
+      },
+      "Cluster 6": {
+        "prototype_engagement": [
+          "Disengaged",
+          "Disengaged",
+          "Disengaged",
+          "Disengaged",
+          "Disengaged",
+          "Disengaged",
+          "Disengaged",
+          "Disengaged"
+        ],
+        "prototype_achievement": [
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        "dominant_combined_states": [
+          "Disengaged | Low",
+          "Average | Low",
+          "Disengaged | Intermediate"
+        ],
+        "mean_final_grade": 58.89
+      }
+    }
+  },
+  "samples": [
+    {
+      "UserID": "00050F0E",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 77.37375,
+      "multichannel_path": "Average | Achiever -> Disengaged | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "006DD50A",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.39625,
+      "multichannel_path": "Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Low -> Average | Low -> Disengaged | Low -> Average | Low"
+    },
+    {
+      "UserID": "05D0E111",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 55.3325,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Disengaged | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "0637AF03",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.0275,
+      "multichannel_path": "Active | Low -> Active | Low -> Active | Intermediate -> Active | Intermediate -> Active | Low -> Active | Low -> Active | Intermediate -> Active | Intermediate"
+    },
+    {
+      "UserID": "065F7507",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 65.07,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Low -> Average | Achiever -> Disengaged | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Disengaged | Low"
+    },
+    {
+      "UserID": "06AC3EDE",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 71.69125,
+      "multichannel_path": "Average | Intermediate -> Average | Low -> Disengaged | Achiever -> Average | Intermediate -> Disengaged | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "08972814",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.05125,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Disengaged | Low -> Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Intermediate -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "089734B8",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 57.92875,
+      "multichannel_path": "Average | Low -> Average | Low -> Disengaged | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "0A30CA6E",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 55.83375,
+      "multichannel_path": "Active | Low -> Average | Low -> Active | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "13FE5766",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 90.38125,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "16AD6797",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 60.41375,
+      "multichannel_path": "Average | Low -> Active | Intermediate -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "173E67ED",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 57.86875,
+      "multichannel_path": "Disengaged | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "1B48F5BA",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 82.6375,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Disengaged | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "21EA54F8",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.98625,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Intermediate -> Disengaged | Intermediate -> Disengaged | Achiever -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "2926CF64",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 47.55625,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "2A696D18",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 65.13,
+      "multichannel_path": "Average | Low -> Disengaged | Intermediate -> Average | Low -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Intermediate -> Disengaged | Intermediate -> Disengaged | Low"
+    },
+    {
+      "UserID": "2AE7F682",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.345,
+      "multichannel_path": "Average | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Disengaged | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "2B39FC2C",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 69.13875,
+      "multichannel_path": "Active | Low -> Active | Intermediate -> Active | Intermediate -> Active | Intermediate -> Active | Achiever -> Active | Achiever -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "2B76A25A",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 75.75,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "2BF883ED",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 75.82625,
+      "multichannel_path": "Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "2BF89F41",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 79.405,
+      "multichannel_path": "Active | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "2BF8A619",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 74.78625,
+      "multichannel_path": "Active | Intermediate -> Active | Intermediate -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "2BF8BAB5",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 76.46875,
+      "multichannel_path": "Average | Achiever -> Active | Achiever -> Active | Achiever -> Average | Intermediate -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "2BF8C805",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 75.855,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "2DA4DA46",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.59125,
+      "multichannel_path": "Average | Intermediate -> Average | Low -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "33ED839D",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 60.05125,
+      "multichannel_path": "Active | Low -> Average | Low -> Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "347FE229",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 79.94,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "3787BEA1",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.275,
+      "multichannel_path": "Average | Intermediate -> Disengaged | Intermediate -> Average | Achiever -> Disengaged | Achiever -> Average | Low -> Average | Low -> Average | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "37C40B2F",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 62.5375,
+      "multichannel_path": "Average | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "38E0C847",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.06875,
+      "multichannel_path": "Average | Intermediate -> Average | Low -> Average | Low -> Active | Intermediate -> Active | Intermediate -> Average | Low -> Active | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "3CC940F5",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.48375,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Intermediate -> Average | Intermediate -> Disengaged | Achiever"
+    },
+    {
+      "UserID": "3D1B4803",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 75.145,
+      "multichannel_path": "Average | Achiever -> Disengaged | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "3E0811B0",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 83.34625,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "3E683139",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 56.47625,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "3E684389",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 59.78875,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "3E685F25",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 69.62875,
+      "multichannel_path": "Average | Low -> Average | Achiever -> Average | Low -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Disengaged | Achiever -> Disengaged | Intermediate"
+    },
+    {
+      "UserID": "3E687AD1",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 66.89375,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "3F72A9F3",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 83.95125,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Disengaged | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "41529D67",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 58.16125,
+      "multichannel_path": "Average | Achiever -> Average | Low -> Average | Intermediate -> Active | Low -> Average | Low -> Disengaged | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "4283C0D0",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 76.17875,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "43CE036B",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 66.1475,
+      "multichannel_path": "Average | Low -> Average | Low -> Active | Low -> Active | Intermediate -> Active | Achiever -> Active | Intermediate -> Active | Intermediate -> Active | Intermediate"
+    },
+    {
+      "UserID": "445C62DF",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 72.82375,
+      "multichannel_path": "Average | Low -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "481F3672",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 72.82375,
+      "multichannel_path": "Average | Intermediate -> Active | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "4AAE9BB2",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 60.61625,
+      "multichannel_path": "Disengaged | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Disengaged | Low -> Active | Low"
+    },
+    {
+      "UserID": "4E2B9146",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 75.63125,
+      "multichannel_path": "Average | Achiever -> Active | Achiever -> Active | Intermediate -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "4E4846BE",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 74.90625,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Intermediate -> Active | Intermediate -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "4E485A12",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 81.725,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "51A82B85",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 78.39875,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Active | Achiever"
+    },
+    {
+      "UserID": "54EE2A89",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.5425,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "579A8B88",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 71.94625,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Intermediate -> Average | Low -> Average | Intermediate"
+    },
+    {
+      "UserID": "5F9F6279",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 59.2,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "60663E96",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 74.415,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "611C86D5",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 76.45625,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Intermediate -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "612708C8",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 74.78125,
+      "multichannel_path": "Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Intermediate -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "61271464",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 75.37,
+      "multichannel_path": "Average | Achiever -> Active | Intermediate -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "61272D3C",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 78.70625,
+      "multichannel_path": "Disengaged | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "61273190",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 81.9075,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "612766D4",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.21,
+      "multichannel_path": "Average | Achiever -> Average | Low -> Average | Achiever -> Active | Low -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "67F45F22",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 72.95125,
+      "multichannel_path": "Average | Achiever -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Low -> Disengaged | Achiever -> Disengaged | Intermediate -> Disengaged | Achiever"
+    },
+    {
+      "UserID": "69AA2409",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 63.73875,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Active | Low -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "6CF914F8",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.7025,
+      "multichannel_path": "Active | Low -> Average | Low -> Active | Low -> Active | Intermediate -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "72C883A2",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 70.10375,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "74B79FE8",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 69.625,
+      "multichannel_path": "Average | Low -> Average | Achiever -> Active | Intermediate -> Average | Achiever -> Active | Low -> Active | Achiever -> Average | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "74B7C8AC",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 62.25125,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Disengaged | Intermediate -> Average | Low -> Average | Intermediate -> Disengaged | Low"
+    },
+    {
+      "UserID": "74B7D400",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 65.17,
+      "multichannel_path": "Disengaged | Intermediate -> Active | Achiever -> Average | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Active | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "74B7F1F4",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 63.54,
+      "multichannel_path": "Average | Achiever -> Average | Low -> Disengaged | Low -> Average | Achiever -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "775501BE",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 61.04375,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "777CB81A",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 61.305,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "7B61F926",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 73.97,
+      "multichannel_path": "Average | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "7C6124C9",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 63.50125,
+      "multichannel_path": "Average | Low -> Average | Low -> Active | Intermediate -> Average | Low -> Active | Low -> Active | Low -> Average | Low -> Active | Intermediate"
+    },
+    {
+      "UserID": "7F84927E",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 74.77,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Low -> Average | Achiever -> Active | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "80213F7A",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 67.70125,
+      "multichannel_path": "Active | Intermediate -> Active | Achiever -> Active | Intermediate -> Average | Intermediate -> Average | Low -> Disengaged | Intermediate -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "80EF3C8F",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 57.75625,
+      "multichannel_path": "Disengaged | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Active | Low -> Active | Intermediate -> Active | Low"
+    },
+    {
+      "UserID": "84101D4B",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 58.75,
+      "multichannel_path": "Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "88B88C8A",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 73.385,
+      "multichannel_path": "Average | Achiever -> Disengaged | Achiever -> Disengaged | Intermediate -> Disengaged | Achiever -> Disengaged | Achiever -> Average | Intermediate -> Disengaged | Achiever -> Disengaged | Achiever"
+    },
+    {
+      "UserID": "88B89026",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 69.215,
+      "multichannel_path": "Active | Low -> Active | Achiever -> Active | Intermediate -> Active | Achiever -> Active | Intermediate -> Active | Achiever -> Active | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "88B8B5D2",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 65.65,
+      "multichannel_path": "Active | Low -> Average | Intermediate -> Average | Low -> Active | Intermediate -> Active | Intermediate -> Average | Low -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "935CB9FC",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 63.22625,
+      "multichannel_path": "Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Average | Low -> Average | Intermediate"
+    },
+    {
+      "UserID": "94950CE3",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 66.45375,
+      "multichannel_path": "Active | Intermediate -> Active | Low -> Active | Intermediate -> Active | Intermediate -> Average | Intermediate -> Average | Low -> Active | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "94CED848",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 68.475,
+      "multichannel_path": "Active | Intermediate -> Active | Low -> Active | Achiever -> Active | Intermediate -> Average | Intermediate -> Active | Intermediate -> Active | Intermediate -> Active | Low"
+    },
+    {
+      "UserID": "985AFF35",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 57.76625,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "9CB99B43",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 61.8175,
+      "multichannel_path": "Average | Low -> Active | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "9D283E5E",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 70.42125,
+      "multichannel_path": "Average | Achiever -> Average | Intermediate -> Average | Achiever -> Average | Intermediate -> Average | Low -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "9D285042",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 79.1625,
+      "multichannel_path": "Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "9D28691A",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 70.66,
+      "multichannel_path": "Disengaged | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Achiever -> Disengaged | Intermediate -> Average | Intermediate -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "9D2875B6",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 76.8075,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "9EB92BD1",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 78.76375,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "A143CD8D",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 68.21625,
+      "multichannel_path": "Average | Intermediate -> Active | Achiever -> Active | Achiever -> Active | Intermediate -> Active | Low -> Average | Low -> Average | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "A9B1C803",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 69.775,
+      "multichannel_path": "Average | Intermediate -> Average | Intermediate -> Average | Achiever -> Average | Intermediate -> Average | Low -> Disengaged | Achiever -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "A9D91207",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.4325,
+      "multichannel_path": "Average | Intermediate -> Active | Intermediate -> Average | Intermediate -> Active | Intermediate -> Average | Low -> Active | Low -> Active | Intermediate -> Active | Low"
+    },
+    {
+      "UserID": "AB944042",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 57.38875,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "ABDF3B2F",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 71.32875,
+      "multichannel_path": "Active | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Intermediate -> Active | Achiever -> Average | Intermediate -> Average | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "AF1628E9",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 58.96875,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "AF83680E",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.06875,
+      "multichannel_path": "Average | Intermediate -> Average | Intermediate -> Average | Low -> Average | Achiever -> Average | Low -> Average | Achiever -> Disengaged | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "AFEBB20A",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 66.02,
+      "multichannel_path": "Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Intermediate -> Disengaged | Intermediate -> Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Low -> Average | Low"
+    },
+    {
+      "UserID": "B18E3C42",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 76.78125,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Disengaged | Achiever -> Disengaged | Achiever"
+    },
+    {
+      "UserID": "B235D544",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 74.7125,
+      "multichannel_path": "Disengaged | Achiever -> Average | Achiever -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Achiever -> Disengaged | Intermediate -> Disengaged | Intermediate"
+    },
+    {
+      "UserID": "B2BB60FE",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 54.39625,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low"
+    },
+    {
+      "UserID": "B61C5DF6",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.75375,
+      "multichannel_path": "Average | Low -> Average | Intermediate -> Active | Low -> Average | Intermediate -> Disengaged | Low -> Disengaged | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "BA2AB888",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 70.4675,
+      "multichannel_path": "Disengaged | Achiever -> Average | Intermediate -> Disengaged | Low -> Average | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "BA837798",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 77.3375,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "BBF9CFDB",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 63.59125,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Intermediate -> Active | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "BC6BAE6F",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 64.14625,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Intermediate -> Disengaged | Low -> Disengaged | Intermediate -> Disengaged | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "BD11162C",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 60.75,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Average | Low -> Average | Intermediate -> Disengaged | Low -> Average | Low -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "BE47C2E3",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 61.60625,
+      "multichannel_path": "Average | Low -> Average | Low -> Average | Low -> Average | Low -> Active | Low -> Average | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "C1ADBCB4",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 72.31625,
+      "multichannel_path": "Average | Achiever -> Average | Intermediate -> Average | Intermediate -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Achiever"
+    },
+    {
+      "UserID": "C22A59A5",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 73.45875,
+      "multichannel_path": "Active | Intermediate -> Average | Achiever -> Active | Achiever -> Average | Achiever -> Average | Intermediate -> Active | Intermediate -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "C26707AF",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 75.78125,
+      "multichannel_path": "Active | Intermediate -> Active | Achiever -> Active | Intermediate -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "C2671B03",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 60.2925,
+      "multichannel_path": "Disengaged | Low -> Average | Intermediate -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Average | Low -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "C267225B",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 60.635,
+      "multichannel_path": "Average | Intermediate -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "C2673EF7",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 64.03625,
+      "multichannel_path": "Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "C26769B3",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 59.9125,
+      "multichannel_path": "Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "C36CEDF1",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 69.08,
+      "multichannel_path": "Average | Achiever -> Active | Intermediate -> Active | Intermediate -> Active | Intermediate -> Active | Intermediate -> Average | Low -> Active | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "C63FDD00",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 59.09125,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Disengaged | Intermediate"
+    },
+    {
+      "UserID": "C83FF0BD",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 50.91375,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "CBDA4F2D",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 71.765,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Intermediate -> Average | Achiever -> Active | Intermediate -> Active | Intermediate"
+    },
+    {
+      "UserID": "D2C5F64E",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 50.565,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Average | Low -> Active | Low -> Active | Low -> Active | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "D3E743C9",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 64.39125,
+      "multichannel_path": "Average | Low -> Average | Intermediate -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Disengaged | Intermediate -> Disengaged | Intermediate"
+    },
+    {
+      "UserID": "D447B3FC",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 83.255,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "D7E3D0DC",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 54.09125,
+      "multichannel_path": "Active | Low -> Active | Low -> Disengaged | Intermediate -> Average | Low -> Active | Low -> Active | Low -> Active | Low -> Average | Intermediate"
+    },
+    {
+      "UserID": "D7F7C7CB",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 73.67375,
+      "multichannel_path": "Disengaged | Achiever -> Disengaged | Intermediate -> Average | Achiever -> Disengaged | Intermediate -> Disengaged | Achiever -> Disengaged | Achiever -> Average | Achiever -> Average | Intermediate"
+    },
+    {
+      "UserID": "D7F7DB67",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 76.6075,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "D7F7FE93",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 79.17875,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "D92F8056",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 55.21125,
+      "multichannel_path": "Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "DEDB455E",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 73.4225,
+      "multichannel_path": "Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Intermediate -> Average | Intermediate -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "E2058149",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 62.79125,
+      "multichannel_path": "Average | Low -> Average | Intermediate -> Average | Low -> Average | Low -> Average | Low -> Average | Intermediate -> Average | Intermediate -> Average | Low"
+    },
+    {
+      "UserID": "E37F390A",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 67.12375,
+      "multichannel_path": "Active | Intermediate -> Active | Intermediate -> Average | Intermediate -> Average | Intermediate -> Active | Intermediate -> Active | Low -> Active | Intermediate -> Active | Intermediate"
+    },
+    {
+      "UserID": "E597E0FD",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 77.05,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Intermediate -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "E7397CA8",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 77.81,
+      "multichannel_path": "Average | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever"
+    },
+    {
+      "UserID": "E908CA93",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 63.4525,
+      "multichannel_path": "Average | Low -> Disengaged | Low -> Average | Low -> Average | Intermediate -> Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "EB0D8430",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 63.30125,
+      "multichannel_path": "Disengaged | Intermediate -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low -> Average | Low -> Disengaged | Low -> Average | Intermediate -> Disengaged | Low"
+    },
+    {
+      "UserID": "EC5BFA62",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 62.57,
+      "multichannel_path": "Active | Low -> Average | Low -> Active | Low -> Average | Intermediate -> Disengaged | Low -> Average | Low -> Average | Intermediate -> Average | Intermediate"
+    },
+    {
+      "UserID": "ED560D33",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 57.42875,
+      "multichannel_path": "Average | Low -> Average | Low -> Disengaged | Low -> Active | Low -> Active | Low -> Average | Low -> Disengaged | Low -> Average | Low"
+    },
+    {
+      "UserID": "ED8FF4BE",
+      "cluster_label": "Cluster 6",
+      "Final_Grade": 55.67125,
+      "multichannel_path": "Average | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Disengaged | Low -> Disengaged | Low"
+    },
+    {
+      "UserID": "EDA58A0A",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 84.58125,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Achiever -> Average | Achiever -> Active | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "EE9AAB27",
+      "cluster_label": "Cluster 4",
+      "Final_Grade": 72.37125,
+      "multichannel_path": "Average | Intermediate -> Average | Achiever -> Average | Intermediate -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "EFC42628",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 62.30875,
+      "multichannel_path": "Disengaged | Low -> Active | Low -> Active | Low -> Active | Low -> Active | Low -> Active | Intermediate -> Active | Low -> Active | Intermediate"
+    },
+    {
+      "UserID": "F81CEC88",
+      "cluster_label": "Cluster 2",
+      "Final_Grade": 71.0725,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Average | Low -> Average | Intermediate -> Active | Intermediate -> Active | Achiever"
+    },
+    {
+      "UserID": "F89100C7",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 54.76875,
+      "multichannel_path": "Active | Low -> Active | Low -> Average | Low -> Average | Low -> Active | Low -> Active | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "F898AC49",
+      "cluster_label": "Cluster 3",
+      "Final_Grade": 70.5125,
+      "multichannel_path": "Average | Achiever -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Average | Intermediate -> Active | Achiever -> Average | Achiever"
+    },
+    {
+      "UserID": "FA754C15",
+      "cluster_label": "Cluster 5",
+      "Final_Grade": 60.3575,
+      "multichannel_path": "Disengaged | Low -> Average | Low -> Average | Low -> Disengaged | Low -> Average | Low -> Average | Low -> Average | Low -> Average | Low"
+    },
+    {
+      "UserID": "FE2E4C85",
+      "cluster_label": "Cluster 1",
+      "Final_Grade": 82.89375,
+      "multichannel_path": "Active | Achiever -> Active | Achiever -> Average | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever -> Active | Achiever"
+    }
+  ]
+}

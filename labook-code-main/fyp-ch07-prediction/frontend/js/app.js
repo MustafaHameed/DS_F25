@@ -23,8 +23,10 @@ async function initializeDashboard() {
         renderMeta();
         renderOverview();
         renderCharts();
+        buildManualInputForm();
         renderStudentsTable(visibleStudents);
         bindFilters();
+        runManualPrediction();
         setStatus("Dashboard loaded from generated backend artifacts.");
     } catch (error) {
         console.error(error);
@@ -163,6 +165,141 @@ function renderFeatureChart() {
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
         xaxis: { title: "Importance", gridcolor: "#e8e0d2" }
+    }, { responsive: true, displayModeBar: false });
+}
+
+function buildManualInputForm() {
+    const manualDemo = dashboardData.manual_demo;
+    const form = document.getElementById("manualInputForm");
+    form.innerHTML = "";
+
+    if (!manualDemo?.field_schema?.length) {
+        form.innerHTML = "<p>Manual forecast inputs are not available in the current backend output.</p>";
+        return;
+    }
+
+    for (const field of manualDemo.field_schema) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "input-field";
+        wrapper.innerHTML = `
+            <label for="field-${field.name}">${field.label}</label>
+            <input id="field-${field.name}" name="${field.name}" type="number" step="${field.step}" min="${field.min}" max="${field.max}" value="${field.default}">
+            <small>${field.description}</small>
+        `;
+        form.appendChild(wrapper);
+    }
+
+    const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.textContent = "Estimate Student Risk";
+    form.appendChild(submitButton);
+
+    const resetButton = document.createElement("button");
+    resetButton.type = "button";
+    resetButton.className = "secondary";
+    resetButton.textContent = "Reset Defaults";
+    resetButton.addEventListener("click", () => {
+        for (const field of manualDemo.field_schema) {
+            document.getElementById(`field-${field.name}`).value = field.default;
+        }
+        runManualPrediction();
+    });
+    form.appendChild(resetButton);
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        runManualPrediction();
+    });
+}
+
+function runManualPrediction() {
+    const manualDemo = dashboardData.manual_demo;
+    if (!manualDemo?.feature_order?.length) {
+        return;
+    }
+
+    const rawInput = manualDemo.feature_order.map((featureName) => Number(document.getElementById(`field-${featureName}`).value));
+
+    const classificationModel = manualDemo.classification_model;
+    const regressionModel = manualDemo.regression_model;
+
+    const riskProbability = logisticScore(rawInput, classificationModel);
+    const predictedGrade = linearScore(rawInput, regressionModel);
+    const thresholds = manualDemo.cohort;
+
+    let riskLevel = "low";
+    if (riskProbability >= thresholds.high_risk_threshold) {
+        riskLevel = "high";
+    } else if (riskProbability >= thresholds.medium_risk_threshold) {
+        riskLevel = "medium";
+    }
+
+    const outcomeLabel = riskProbability >= 0.5 ? "Low" : "High";
+    const gradeDelta = predictedGrade - thresholds.average_grade;
+    const deltaLabel = `${gradeDelta >= 0 ? "+" : ""}${gradeDelta.toFixed(2)} vs cohort average`;
+
+    document.getElementById("manualSummary").innerHTML = `
+        <strong>${titleCase(riskLevel)} risk forecast</strong>
+        Risk probability: ${formatPercent(riskProbability)}<br>
+        Predicted outcome: ${outcomeLabel}<br>
+        Predicted final grade: ${predictedGrade.toFixed(2)}<br>
+        Grade delta: ${deltaLabel}
+    `;
+
+    renderManualRiskChart(riskProbability, riskLevel);
+    renderManualGradeChart(predictedGrade, thresholds.average_grade, thresholds.median_grade);
+}
+
+function logisticScore(rawInput, model) {
+    const standardized = rawInput.map((value, index) => (value - model.scaler_mean[index]) / model.scaler_scale[index]);
+    const linearTerm = standardized.reduce(
+        (sum, value, index) => sum + value * model.coefficients[index],
+        model.intercept
+    );
+    return 1 / (1 + Math.exp(-linearTerm));
+}
+
+function linearScore(rawInput, model) {
+    const standardized = rawInput.map((value, index) => (value - model.scaler_mean[index]) / model.scaler_scale[index]);
+    return standardized.reduce(
+        (sum, value, index) => sum + value * model.coefficients[index],
+        model.intercept
+    );
+}
+
+function renderManualRiskChart(riskProbability, riskLevel) {
+    Plotly.newPlot("manualRiskChart", [
+        {
+            type: "bar",
+            x: ["Risk probability"],
+            y: [Number((riskProbability * 100).toFixed(2))],
+            marker: {
+                color: riskLevel === "high" ? "#c24f2a" : (riskLevel === "medium" ? "#d3a223" : "#0d7a5f")
+            },
+            hovertemplate: "%{y}%<extra></extra>"
+        }
+    ], {
+        margin: { t: 20, r: 20, b: 40, l: 45 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        yaxis: { title: "Probability (%)", range: [0, 100], gridcolor: "#e8e0d2" }
+    }, { responsive: true, displayModeBar: false });
+}
+
+function renderManualGradeChart(predictedGrade, averageGrade, medianGrade) {
+    Plotly.newPlot("manualGradeChart", [
+        {
+            type: "bar",
+            x: ["Predicted grade", "Cohort average", "Cohort median"],
+            y: [predictedGrade, averageGrade, medianGrade],
+            marker: { color: ["#0d7a5f", "#64513c", "#c24f2a"] },
+            hovertemplate: "%{x}: %{y:.2f}<extra></extra>"
+        }
+    ], {
+        margin: { t: 20, r: 20, b: 50, l: 45 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        yaxis: { title: "Grade", gridcolor: "#e8e0d2" }
     }, { responsive: true, displayModeBar: false });
 }
 

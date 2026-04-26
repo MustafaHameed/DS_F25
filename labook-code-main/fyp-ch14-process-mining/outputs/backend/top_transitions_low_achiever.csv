@@ -1,0 +1,16 @@
+Action,next_action,count,mean_gap_seconds
+Group_work,Group_work,8854,41.32
+Course_view,Course_view,3310,63.9
+Practicals,Practicals,2973,14.96
+Course_view,Group_work,2472,48.31
+Group_work,Course_view,2198,45.49
+Assignment,Assignment,2180,20.69
+Course_view,Instructions,911,40.96
+Course_view,Practicals,879,57.52
+Instructions,Course_view,824,37.35
+Instructions,Instructions,788,33.6
+Course_view,Assignment,732,49.45
+Practicals,Course_view,708,51.75
+Assignment,Course_view,529,34.37
+Instructions,Group_work,329,59.34
+Group_work,Instructions,257,45.74

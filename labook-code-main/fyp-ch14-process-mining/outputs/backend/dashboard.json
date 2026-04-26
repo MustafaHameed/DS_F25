@@ -1,0 +1,1762 @@
+{
+  "project": {
+    "title": "Learning Process Mining Studio",
+    "generated_at": "2026-04-25 09:20:38",
+    "backend": "Python",
+    "source_chapter": "Chapter 14",
+    "source_qmd": "ch14-process.qmd",
+    "source_notebook": "ch14-process-mining.ipynb"
+  },
+  "overview": {
+    "total_events": 95626,
+    "trimmed_events": 81904,
+    "total_sessions": 9450,
+    "distinct_actions": 5
+  },
+  "action_catalogue": [
+    "Group_work",
+    "Course_view",
+    "Practicals",
+    "Assignment",
+    "Instructions"
+  ],
+  "activity_frequency": [
+    {
+      "Action": "Group_work",
+      "count": 32748,
+      "proportion": 0.3998339519
+    },
+    {
+      "Action": "Course_view",
+      "count": 25293,
+      "proportion": 0.3088127564
+    },
+    {
+      "Action": "Practicals",
+      "count": 10020,
+      "proportion": 0.1223383473
+    },
+    {
+      "Action": "Assignment",
+      "count": 7369,
+      "proportion": 0.0899711858
+    },
+    {
+      "Action": "Instructions",
+      "count": 6474,
+      "proportion": 0.0790437585
+    }
+  ],
+  "activity_frequency_by_group": [
+    {
+      "AchievingGroup": "High achiever",
+      "Action": "Group_work",
+      "count": 20091,
+      "proportion": 0.4067004049
+    },
+    {
+      "AchievingGroup": "High achiever",
+      "Action": "Course_view",
+      "count": 15851,
+      "proportion": 0.3208704453
+    },
+    {
+      "AchievingGroup": "High achiever",
+      "Action": "Practicals",
+      "count": 5459,
+      "proportion": 0.1105060729
+    },
+    {
+      "AchievingGroup": "High achiever",
+      "Action": "Instructions",
+      "count": 4190,
+      "proportion": 0.0848178138
+    },
+    {
+      "AchievingGroup": "High achiever",
+      "Action": "Assignment",
+      "count": 3809,
+      "proportion": 0.0771052632
+    },
+    {
+      "AchievingGroup": "Low achiever",
+      "Action": "Group_work",
+      "count": 12657,
+      "proportion": 0.3893982279
+    },
+    {
+      "AchievingGroup": "Low achiever",
+      "Action": "Course_view",
+      "count": 9442,
+      "proportion": 0.2904873246
+    },
+    {
+      "AchievingGroup": "Low achiever",
+      "Action": "Practicals",
+      "count": 4561,
+      "proportion": 0.1403211912
+    },
+    {
+      "AchievingGroup": "Low achiever",
+      "Action": "Assignment",
+      "count": 3560,
+      "proportion": 0.1095249815
+    },
+    {
+      "AchievingGroup": "Low achiever",
+      "Action": "Instructions",
+      "count": 2284,
+      "proportion": 0.0702682747
+    }
+  ],
+  "top_transitions": [
+    {
+      "Action": "Group_work",
+      "next_action": "Group_work",
+      "count": 22429,
+      "mean_gap_seconds": 41.51
+    },
+    {
+      "Action": "Course_view",
+      "next_action": "Course_view",
+      "count": 8968,
+      "mean_gap_seconds": 67.95
+    },
+    {
+      "Action": "Course_view",
+      "next_action": "Group_work",
+      "count": 6865,
+      "mean_gap_seconds": 48.85
+    },
+    {
+      "Action": "Practicals",
+      "next_action": "Practicals",
+      "count": 6431,
+      "mean_gap_seconds": 13.39
+    },
+    {
+      "Action": "Group_work",
+      "next_action": "Course_view",
+      "count": 6089,
+      "mean_gap_seconds": 55.1
+    },
+    {
+      "Action": "Assignment",
+      "next_action": "Assignment",
+      "count": 4344,
+      "mean_gap_seconds": 19.34
+    },
+    {
+      "Action": "Course_view",
+      "next_action": "Instructions",
+      "count": 2586,
+      "mean_gap_seconds": 41.95
+    },
+    {
+      "Action": "Instructions",
+      "next_action": "Instructions",
+      "count": 2392,
+      "mean_gap_seconds": 34.3
+    },
+    {
+      "Action": "Instructions",
+      "next_action": "Course_view",
+      "count": 2246,
+      "mean_gap_seconds": 43.77
+    },
+    {
+      "Action": "Course_view",
+      "next_action": "Practicals",
+      "count": 1960,
+      "mean_gap_seconds": 56.66
+    },
+    {
+      "Action": "Practicals",
+      "next_action": "Course_view",
+      "count": 1651,
+      "mean_gap_seconds": 47.97
+    },
+    {
+      "Action": "Course_view",
+      "next_action": "Assignment",
+      "count": 1608,
+      "mean_gap_seconds": 58.28
+    },
+    {
+      "Action": "Assignment",
+      "next_action": "Course_view",
+      "count": 1280,
+      "mean_gap_seconds": 42.27
+    },
+    {
+      "Action": "Instructions",
+      "next_action": "Group_work",
+      "count": 782,
+      "mean_gap_seconds": 67.32
+    },
+    {
+      "Action": "Group_work",
+      "next_action": "Instructions",
+      "count": 654,
+      "mean_gap_seconds": 43.66
+    }
+  ],
+  "group_top_transitions": {
+    "High achiever": [
+      {
+        "Action": "Group_work",
+        "next_action": "Group_work",
+        "count": 13575,
+        "mean_gap_seconds": 41.63
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Course_view",
+        "count": 5658,
+        "mean_gap_seconds": 70.33
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Group_work",
+        "count": 4393,
+        "mean_gap_seconds": 49.16
+      },
+      {
+        "Action": "Group_work",
+        "next_action": "Course_view",
+        "count": 3891,
+        "mean_gap_seconds": 60.52
+      },
+      {
+        "Action": "Practicals",
+        "next_action": "Practicals",
+        "count": 3458,
+        "mean_gap_seconds": 12.04
+      },
+      {
+        "Action": "Assignment",
+        "next_action": "Assignment",
+        "count": 2164,
+        "mean_gap_seconds": 17.99
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Instructions",
+        "count": 1675,
+        "mean_gap_seconds": 42.49
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Instructions",
+        "count": 1604,
+        "mean_gap_seconds": 34.64
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Course_view",
+        "count": 1422,
+        "mean_gap_seconds": 47.49
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Practicals",
+        "count": 1081,
+        "mean_gap_seconds": 55.97
+      },
+      {
+        "Action": "Practicals",
+        "next_action": "Course_view",
+        "count": 943,
+        "mean_gap_seconds": 45.13
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Assignment",
+        "count": 876,
+        "mean_gap_seconds": 65.65
+      },
+      {
+        "Action": "Assignment",
+        "next_action": "Course_view",
+        "count": 751,
+        "mean_gap_seconds": 47.83
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Group_work",
+        "count": 453,
+        "mean_gap_seconds": 73.12
+      },
+      {
+        "Action": "Group_work",
+        "next_action": "Instructions",
+        "count": 397,
+        "mean_gap_seconds": 42.31
+      }
+    ],
+    "Low achiever": [
+      {
+        "Action": "Group_work",
+        "next_action": "Group_work",
+        "count": 8854,
+        "mean_gap_seconds": 41.32
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Course_view",
+        "count": 3310,
+        "mean_gap_seconds": 63.9
+      },
+      {
+        "Action": "Practicals",
+        "next_action": "Practicals",
+        "count": 2973,
+        "mean_gap_seconds": 14.96
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Group_work",
+        "count": 2472,
+        "mean_gap_seconds": 48.31
+      },
+      {
+        "Action": "Group_work",
+        "next_action": "Course_view",
+        "count": 2198,
+        "mean_gap_seconds": 45.49
+      },
+      {
+        "Action": "Assignment",
+        "next_action": "Assignment",
+        "count": 2180,
+        "mean_gap_seconds": 20.69
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Instructions",
+        "count": 911,
+        "mean_gap_seconds": 40.96
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Practicals",
+        "count": 879,
+        "mean_gap_seconds": 57.52
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Course_view",
+        "count": 824,
+        "mean_gap_seconds": 37.35
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Instructions",
+        "count": 788,
+        "mean_gap_seconds": 33.6
+      },
+      {
+        "Action": "Course_view",
+        "next_action": "Assignment",
+        "count": 732,
+        "mean_gap_seconds": 49.45
+      },
+      {
+        "Action": "Practicals",
+        "next_action": "Course_view",
+        "count": 708,
+        "mean_gap_seconds": 51.75
+      },
+      {
+        "Action": "Assignment",
+        "next_action": "Course_view",
+        "count": 529,
+        "mean_gap_seconds": 34.37
+      },
+      {
+        "Action": "Instructions",
+        "next_action": "Group_work",
+        "count": 329,
+        "mean_gap_seconds": 59.34
+      },
+      {
+        "Action": "Group_work",
+        "next_action": "Instructions",
+        "count": 257,
+        "mean_gap_seconds": 45.74
+      }
+    ]
+  },
+  "manual_demo": {
+    "default_path": [
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Course_view",
+      "Practicals",
+      "Practicals",
+      "Practicals",
+      "Practicals"
+    ],
+    "group_models": {
+      "High achiever": {
+        "initial_probs": {
+          "Group_work": 0.234821,
+          "Course_view": 0.545066,
+          "Practicals": 0.088421,
+          "Assignment": 0.0732,
+          "Instructions": 0.058492
+        },
+        "transition_probs": {
+          "Group_work": {
+            "Group_work": 0.744421,
+            "Course_view": 0.213412,
+            "Practicals": 0.011515,
+            "Assignment": 0.008828,
+            "Instructions": 0.021824
+          },
+          "Course_view": {
+            "Group_work": 0.321011,
+            "Course_view": 0.413428,
+            "Practicals": 0.079047,
+            "Assignment": 0.064071,
+            "Instructions": 0.122443
+          },
+          "Practicals": {
+            "Group_work": 0.041449,
+            "Course_view": 0.197614,
+            "Practicals": 0.724095,
+            "Assignment": 0.015282,
+            "Instructions": 0.021562
+          },
+          "Assignment": {
+            "Group_work": 0.032278,
+            "Course_view": 0.237975,
+            "Practicals": 0.021835,
+            "Assignment": 0.685127,
+            "Instructions": 0.022785
+          },
+          "Instructions": {
+            "Group_work": 0.12201,
+            "Course_view": 0.382424,
+            "Practicals": 0.034399,
+            "Assignment": 0.029831,
+            "Instructions": 0.431336
+          }
+        }
+      },
+      "Low achiever": {
+        "initial_probs": {
+          "Group_work": 0.209798,
+          "Course_view": 0.518683,
+          "Practicals": 0.114033,
+          "Assignment": 0.101578,
+          "Instructions": 0.055909
+        },
+        "transition_probs": {
+          "Group_work": {
+            "Group_work": 0.76277,
+            "Course_view": 0.189422,
+            "Practicals": 0.012318,
+            "Assignment": 0.013266,
+            "Instructions": 0.022224
+          },
+          "Course_view": {
+            "Group_work": 0.297629,
+            "Course_view": 0.398484,
+            "Practicals": 0.105909,
+            "Assignment": 0.088218,
+            "Instructions": 0.109761
+          },
+          "Practicals": {
+            "Group_work": 0.032266,
+            "Course_view": 0.178724,
+            "Practicals": 0.749685,
+            "Assignment": 0.020671,
+            "Instructions": 0.018654
+          },
+          "Assignment": {
+            "Group_work": 0.040121,
+            "Course_view": 0.178692,
+            "Practicals": 0.02731,
+            "Assignment": 0.735334,
+            "Instructions": 0.018543
+          },
+          "Instructions": {
+            "Group_work": 0.15942,
+            "Course_view": 0.398551,
+            "Practicals": 0.037198,
+            "Assignment": 0.023671,
+            "Instructions": 0.381159
+          }
+        }
+      }
+    }
+  },
+  "samples": [
+    {
+      "session_id": "f753ce9bf_Session_22",
+      "user": "f753ce9bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 57,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "488b6e908_Session_22",
+      "user": "488b6e908",
+      "AchievingGroup": "Low achiever",
+      "event_count": 57,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "efe124d2f_Session_22",
+      "user": "efe124d2f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 57,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "e06debeb8_Session_22",
+      "user": "e06debeb8",
+      "AchievingGroup": "High achiever",
+      "event_count": 56,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "488b6e908_Session_44",
+      "user": "488b6e908",
+      "AchievingGroup": "Low achiever",
+      "event_count": 55,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "f753ce9bf_Session_44",
+      "user": "f753ce9bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 55,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "fc95def14_Session_82",
+      "user": "fc95def14",
+      "AchievingGroup": "High achiever",
+      "event_count": 55,
+      "action_path": "Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e06debeb8_Session_44",
+      "user": "e06debeb8",
+      "AchievingGroup": "High achiever",
+      "event_count": 55,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "efe124d2f_Session_44",
+      "user": "efe124d2f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 55,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a48165ad5_Session_25",
+      "user": "a48165ad5",
+      "AchievingGroup": "Low achiever",
+      "event_count": 54,
+      "action_path": "Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e7d532916_Session_25",
+      "user": "e7d532916",
+      "AchievingGroup": "Low achiever",
+      "event_count": 54,
+      "action_path": "Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "042b07ba1_Session_8",
+      "user": "042b07ba1",
+      "AchievingGroup": "Low achiever",
+      "event_count": 53,
+      "action_path": "Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "b4ba8bbd5_Session_82",
+      "user": "b4ba8bbd5",
+      "AchievingGroup": "High achiever",
+      "event_count": 53,
+      "action_path": "Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "dc1de84bd_Session_82",
+      "user": "dc1de84bd",
+      "AchievingGroup": "High achiever",
+      "event_count": 53,
+      "action_path": "Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "4b1055dba_Session_8",
+      "user": "4b1055dba",
+      "AchievingGroup": "Low achiever",
+      "event_count": 53,
+      "action_path": "Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "417892918_Session_92",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_92",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "7e2726f3c_Session_92",
+      "user": "7e2726f3c",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "8e21dc99c_Session_92",
+      "user": "8e21dc99c",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "475586bc0_Session_62",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "9e96fd448_Session_8",
+      "user": "9e96fd448",
+      "AchievingGroup": "Low achiever",
+      "event_count": 52,
+      "action_path": "Course_view -> Instructions -> Instructions -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "3924dd271_Session_62",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "e4f7cca85_Session_62",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 52,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "278a75edf_Session_48",
+      "user": "278a75edf",
+      "AchievingGroup": "Low achiever",
+      "event_count": 50,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "a0df056a9_Session_48",
+      "user": "a0df056a9",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "77b6d3f57_Session_45",
+      "user": "77b6d3f57",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Group_work -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Course_view -> Assignment -> Group_work -> Group_work -> Assignment"
+    },
+    {
+      "session_id": "72a9ecbd7_Session_48",
+      "user": "72a9ecbd7",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "93d1f2e82_Session_45",
+      "user": "93d1f2e82",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Course_view -> Assignment -> Assignment -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "aab7ad69f_Session_51",
+      "user": "aab7ad69f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "91489f7a9_Session_45",
+      "user": "91489f7a9",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Course_view -> Assignment -> Group_work -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "68a377c82_Session_45",
+      "user": "68a377c82",
+      "AchievingGroup": "Low achiever",
+      "event_count": 49,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Course_view -> Assignment -> Group_work -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "3df19c0ee_Session_51",
+      "user": "3df19c0ee",
+      "AchievingGroup": "High achiever",
+      "event_count": 49,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "a48165ad5_Session_20",
+      "user": "a48165ad5",
+      "AchievingGroup": "Low achiever",
+      "event_count": 48,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "86f00df48_Session_31",
+      "user": "86f00df48",
+      "AchievingGroup": "High achiever",
+      "event_count": 48,
+      "action_path": "Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_145",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 48,
+      "action_path": "Practicals -> Course_view -> Course_view -> Group_work -> Course_view -> Assignment -> Course_view -> Course_view -> Assignment -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e1ef8e754_Session_31",
+      "user": "e1ef8e754",
+      "AchievingGroup": "High achiever",
+      "event_count": 48,
+      "action_path": "Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Practicals"
+    },
+    {
+      "session_id": "72a9ecbd7_Session_70",
+      "user": "72a9ecbd7",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "3924dd271_Session_60",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "ec3b8cb91_Session_31",
+      "user": "ec3b8cb91",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "8e21dc99c_Session_145",
+      "user": "8e21dc99c",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Course_view -> Course_view -> Group_work -> Course_view -> Assignment -> Course_view -> Course_view -> Assignment -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e4f7cca85_Session_60",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "475586bc0_Session_60",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "417892918_Session_145",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Course_view -> Course_view -> Group_work -> Course_view -> Assignment -> Course_view -> Course_view -> Assignment -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "7e2726f3c_Session_145",
+      "user": "7e2726f3c",
+      "AchievingGroup": "High achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Course_view -> Course_view -> Group_work -> Course_view -> Assignment -> Course_view -> Course_view -> Assignment -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "0604ff3d3_Session_31",
+      "user": "0604ff3d3",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "278a75edf_Session_70",
+      "user": "278a75edf",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "a0df056a9_Session_70",
+      "user": "a0df056a9",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "bab4f0825_Session_31",
+      "user": "bab4f0825",
+      "AchievingGroup": "Low achiever",
+      "event_count": 47,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "0604ff3d3_Session_16",
+      "user": "0604ff3d3",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "77b6d3f57_Session_42",
+      "user": "77b6d3f57",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "475586bc0_Session_80",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Instructions -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "68a377c82_Session_42",
+      "user": "68a377c82",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "ec3b8cb91_Session_16",
+      "user": "ec3b8cb91",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "93d1f2e82_Session_42",
+      "user": "93d1f2e82",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "111422ee7_Session_13",
+      "user": "111422ee7",
+      "AchievingGroup": "High achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "215b886a6_Session_13",
+      "user": "215b886a6",
+      "AchievingGroup": "High achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "bab4f0825_Session_16",
+      "user": "bab4f0825",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "bf46a6f13_Session_16",
+      "user": "bf46a6f13",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Instructions -> Course_view -> Instructions -> Instructions -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "d19a40ad6_Session_16",
+      "user": "d19a40ad6",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Instructions -> Course_view -> Instructions -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "aab7ad69f_Session_12",
+      "user": "aab7ad69f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Group_work -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Instructions -> Instructions -> Instructions -> Group_work -> Instructions"
+    },
+    {
+      "session_id": "9e96fd448_Session_38",
+      "user": "9e96fd448",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Practicals -> Course_view -> Instructions -> Course_view -> Instructions -> Instructions -> Course_view -> Instructions -> Instructions -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "e4f7cca85_Session_80",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Instructions -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Instructions -> Practicals -> Course_view"
+    },
+    {
+      "session_id": "e7d532916_Session_20",
+      "user": "e7d532916",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Practicals -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "042b07ba1_Session_38",
+      "user": "042b07ba1",
+      "AchievingGroup": "Low achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Practicals -> Course_view -> Course_view -> Course_view -> Instructions -> Instructions -> Course_view -> Instructions -> Instructions -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "2dba4eea6_Session_13",
+      "user": "2dba4eea6",
+      "AchievingGroup": "High achiever",
+      "event_count": 46,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "590846fe3_Session_19",
+      "user": "590846fe3",
+      "AchievingGroup": "Low achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "3924dd271_Session_80",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Instructions -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Instructions -> Practicals -> Course_view"
+    },
+    {
+      "session_id": "e06debeb8_Session_34",
+      "user": "e06debeb8",
+      "AchievingGroup": "High achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "91489f7a9_Session_42",
+      "user": "91489f7a9",
+      "AchievingGroup": "Low achiever",
+      "event_count": 45,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "1eee1b944_Session_35",
+      "user": "1eee1b944",
+      "AchievingGroup": "High achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "488b6e908_Session_34",
+      "user": "488b6e908",
+      "AchievingGroup": "Low achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "f753ce9bf_Session_34",
+      "user": "f753ce9bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "efe124d2f_Session_34",
+      "user": "efe124d2f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 45,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "4b1055dba_Session_38",
+      "user": "4b1055dba",
+      "AchievingGroup": "Low achiever",
+      "event_count": 45,
+      "action_path": "Practicals -> Practicals -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Instructions -> Instructions -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "33946b26e_Session_41",
+      "user": "33946b26e",
+      "AchievingGroup": "Low achiever",
+      "event_count": 44,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "29049945c_Session_41",
+      "user": "29049945c",
+      "AchievingGroup": "Low achiever",
+      "event_count": 44,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "111ad4bea_Session_19",
+      "user": "111ad4bea",
+      "AchievingGroup": "Low achiever",
+      "event_count": 44,
+      "action_path": "Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "654da75e0_Session_41",
+      "user": "654da75e0",
+      "AchievingGroup": "Low achiever",
+      "event_count": 44,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "310c79a41_Session_57",
+      "user": "310c79a41",
+      "AchievingGroup": "High achiever",
+      "event_count": 44,
+      "action_path": "Course_view -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "1115dae61_Session_9",
+      "user": "1115dae61",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "042b07ba1_Session_27",
+      "user": "042b07ba1",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Course_view -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a46e01dd3_Session_33",
+      "user": "a46e01dd3",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "1dddd964c_Session_33",
+      "user": "1dddd964c",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "475586bc0_Session_36",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "4b1055dba_Session_27",
+      "user": "4b1055dba",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Course_view -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "9e96fd448_Session_27",
+      "user": "9e96fd448",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Course_view -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e4f7cca85_Session_36",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "081b100cf_Session_57",
+      "user": "081b100cf",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "3924dd271_Session_36",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "3df19c0ee_Session_12",
+      "user": "3df19c0ee",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Instructions -> Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Instructions -> Group_work -> Instructions -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "3e3a6ce0e_Session_6",
+      "user": "3e3a6ce0e",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Instructions -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "f00e4ce1a_Session_33",
+      "user": "f00e4ce1a",
+      "AchievingGroup": "Low achiever",
+      "event_count": 43,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "57b5ca965_Session_57",
+      "user": "57b5ca965",
+      "AchievingGroup": "High achiever",
+      "event_count": 43,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "dc40ae49d_Session_9",
+      "user": "dc40ae49d",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a1639fc4e_Session_135",
+      "user": "a1639fc4e",
+      "AchievingGroup": "High achiever",
+      "event_count": 42,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "ab91130d4_Session_6",
+      "user": "ab91130d4",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Instructions -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "31eedd54c_Session_135",
+      "user": "31eedd54c",
+      "AchievingGroup": "High achiever",
+      "event_count": 42,
+      "action_path": "Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Instructions -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "e7ea6fc25_Session_6",
+      "user": "e7ea6fc25",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Instructions -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "654da75e0_Session_11",
+      "user": "654da75e0",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Course_view -> Course_view -> Course_view -> Instructions -> Course_view -> Instructions -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "6fccddb82_Session_9",
+      "user": "6fccddb82",
+      "AchievingGroup": "High achiever",
+      "event_count": 42,
+      "action_path": "Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "70581f7ef_Session_9",
+      "user": "70581f7ef",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "13107114f_Session_6",
+      "user": "13107114f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 42,
+      "action_path": "Assignment -> Assignment -> Course_view -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "ba76ebfab_Session_135",
+      "user": "ba76ebfab",
+      "AchievingGroup": "High achiever",
+      "event_count": 42,
+      "action_path": "Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "29049945c_Session_11",
+      "user": "29049945c",
+      "AchievingGroup": "Low achiever",
+      "event_count": 41,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Instructions -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "91fc5722e_Session_35",
+      "user": "91fc5722e",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "fc95def14_Session_26",
+      "user": "fc95def14",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "fc95def14_Session_9",
+      "user": "fc95def14",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Course_view -> Course_view -> Instructions -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view -> Instructions -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "86f00df48_Session_24",
+      "user": "86f00df48",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "dc1de84bd_Session_26",
+      "user": "dc1de84bd",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "b4ba8bbd5_Session_26",
+      "user": "b4ba8bbd5",
+      "AchievingGroup": "High achiever",
+      "event_count": 41,
+      "action_path": "Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "33946b26e_Session_11",
+      "user": "33946b26e",
+      "AchievingGroup": "Low achiever",
+      "event_count": 41,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Instructions -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a1639fc4e_Session_117",
+      "user": "a1639fc4e",
+      "AchievingGroup": "High achiever",
+      "event_count": 40,
+      "action_path": "Group_work -> Group_work -> Group_work -> Practicals -> Group_work -> Instructions -> Course_view -> Instructions -> Group_work -> Group_work -> Group_work -> Instructions"
+    },
+    {
+      "session_id": "e4f7cca85_Session_63",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 40,
+      "action_path": "Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "ba76ebfab_Session_117",
+      "user": "ba76ebfab",
+      "AchievingGroup": "High achiever",
+      "event_count": 40,
+      "action_path": "Group_work -> Group_work -> Group_work -> Practicals -> Group_work -> Instructions -> Course_view -> Instructions -> Group_work -> Group_work -> Group_work -> Instructions"
+    },
+    {
+      "session_id": "475586bc0_Session_63",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 40,
+      "action_path": "Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "3924dd271_Session_63",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 40,
+      "action_path": "Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "9d744e5bf_Session_13",
+      "user": "9d744e5bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Group_work -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e7ea6fc25_Session_24",
+      "user": "e7ea6fc25",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Group_work -> Group_work -> Group_work -> Instructions -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "042b07ba1_Session_5",
+      "user": "042b07ba1",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "dc1de84bd_Session_9",
+      "user": "dc1de84bd",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Instructions -> Instructions -> Course_view -> Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "f753ce9bf_Session_45",
+      "user": "f753ce9bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "0ef305578_Session_42",
+      "user": "0ef305578",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a48165ad5_Session_54",
+      "user": "a48165ad5",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e7d532916_Session_54",
+      "user": "e7d532916",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "077584d71_Session_13",
+      "user": "077584d71",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Group_work -> Course_view -> Instructions -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "e06debeb8_Session_45",
+      "user": "e06debeb8",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "53d6ab60c_Session_61",
+      "user": "53d6ab60c",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Assignment -> Practicals -> Practicals -> Assignment -> Assignment -> Assignment -> Practicals"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_100",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "488b6e908_Session_45",
+      "user": "488b6e908",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Group_work -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "3970a954b_Session_42",
+      "user": "3970a954b",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "1434f44e1_Session_42",
+      "user": "1434f44e1",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "475586bc0_Session_96",
+      "user": "475586bc0",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "efe124d2f_Session_45",
+      "user": "efe124d2f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "e1ef8e754_Session_24",
+      "user": "e1ef8e754",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "1813081bd_Session_61",
+      "user": "1813081bd",
+      "AchievingGroup": "High achiever",
+      "event_count": 39,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Assignment -> Practicals -> Practicals -> Assignment -> Assignment -> Assignment -> Practicals"
+    },
+    {
+      "session_id": "7a17472ef_Session_4",
+      "user": "7a17472ef",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Instructions -> Instructions -> Course_view -> Group_work -> Group_work -> Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Group_work -> Instructions"
+    },
+    {
+      "session_id": "e4f7cca85_Session_96",
+      "user": "e4f7cca85",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "f911affae_Session_2",
+      "user": "f911affae",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Instructions -> Course_view -> Course_view -> Course_view -> Group_work -> Course_view -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Instructions"
+    },
+    {
+      "session_id": "4b1055dba_Session_5",
+      "user": "4b1055dba",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "176bb0f33_Session_61",
+      "user": "176bb0f33",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Assignment -> Practicals -> Practicals -> Assignment -> Assignment -> Assignment -> Assignment"
+    },
+    {
+      "session_id": "b4ba8bbd5_Session_9",
+      "user": "b4ba8bbd5",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Instructions -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Instructions -> Course_view -> Instructions -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_129",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "13107114f_Session_24",
+      "user": "13107114f",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Group_work -> Instructions -> Instructions -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "8e21dc99c_Session_121",
+      "user": "8e21dc99c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "417892918_Session_100",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "417892918_Session_129",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "31eedd54c_Session_117",
+      "user": "31eedd54c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Group_work -> Group_work -> Practicals -> Group_work -> Instructions -> Course_view -> Instructions -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "8e21dc99c_Session_100",
+      "user": "8e21dc99c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "7e2726f3c_Session_121",
+      "user": "7e2726f3c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "7e2726f3c_Session_100",
+      "user": "7e2726f3c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "8e21dc99c_Session_129",
+      "user": "8e21dc99c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "3e3a6ce0e_Session_24",
+      "user": "3e3a6ce0e",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Group_work -> Instructions -> Instructions -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "417892918_Session_121",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "7e2726f3c_Session_129",
+      "user": "7e2726f3c",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Practicals -> Practicals -> Practicals -> Practicals -> Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals -> Practicals"
+    },
+    {
+      "session_id": "6c3c364f3_Session_80",
+      "user": "6c3c364f3",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "3924dd271_Session_96",
+      "user": "3924dd271",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "9e96fd448_Session_5",
+      "user": "9e96fd448",
+      "AchievingGroup": "Low achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "b6bad81ae_Session_61",
+      "user": "b6bad81ae",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Practicals -> Assignment -> Practicals -> Practicals -> Assignment -> Assignment -> Assignment -> Practicals"
+    },
+    {
+      "session_id": "9d744e5bf_Session_80",
+      "user": "9d744e5bf",
+      "AchievingGroup": "High achiever",
+      "event_count": 38,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_117",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "82ed5d2d3_Session_121",
+      "user": "82ed5d2d3",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Course_view -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "3970a954b_Session_7",
+      "user": "3970a954b",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Group_work -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "70581f7ef_Session_10",
+      "user": "70581f7ef",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Instructions -> Course_view -> Instructions -> Instructions -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "dc40ae49d_Session_10",
+      "user": "dc40ae49d",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions -> Course_view"
+    },
+    {
+      "session_id": "6fccddb82_Session_10",
+      "user": "6fccddb82",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Instructions -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "077584d71_Session_80",
+      "user": "077584d71",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "417892918_Session_117",
+      "user": "417892918",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a48165ad5_Session_45",
+      "user": "a48165ad5",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "ab91130d4_Session_24",
+      "user": "ab91130d4",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Group_work -> Group_work -> Instructions -> Instructions -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "a9554144c_Session_4",
+      "user": "a9554144c",
+      "AchievingGroup": "High achiever",
+      "event_count": 37,
+      "action_path": "Instructions -> Instructions -> Course_view -> Group_work -> Course_view -> Instructions -> Instructions -> Instructions -> Instructions -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "e7d532916_Session_45",
+      "user": "e7d532916",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "2c2845d52_Session_23",
+      "user": "2c2845d52",
+      "AchievingGroup": "Low achiever",
+      "event_count": 37,
+      "action_path": "Course_view -> Course_view -> Practicals -> Practicals -> Course_view -> Course_view -> Group_work -> Instructions -> Instructions -> Course_view -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "31eedd54c_Session_9",
+      "user": "31eedd54c",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Course_view -> Course_view -> Instructions -> Course_view -> Course_view -> Instructions -> Course_view -> Assignment -> Course_view -> Assignment -> Course_view -> Course_view"
+    },
+    {
+      "session_id": "b8907d293_Session_55",
+      "user": "b8907d293",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Group_work -> Instructions -> Group_work -> Group_work -> Course_view -> Group_work -> Course_view -> Course_view -> Course_view -> Instructions -> Course_view -> Group_work"
+    },
+    {
+      "session_id": "1434f44e1_Session_7",
+      "user": "1434f44e1",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Group_work -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Instructions -> Instructions"
+    },
+    {
+      "session_id": "ba76ebfab_Session_9",
+      "user": "ba76ebfab",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Group_work -> Group_work -> Instructions -> Course_view -> Course_view -> Course_view -> Course_view -> Assignment -> Course_view -> Course_view -> Assignment -> Course_view"
+    },
+    {
+      "session_id": "488b6e908_Session_39",
+      "user": "488b6e908",
+      "AchievingGroup": "Low achiever",
+      "event_count": 36,
+      "action_path": "Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    },
+    {
+      "session_id": "8c70d6efc_Session_36",
+      "user": "8c70d6efc",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view"
+    },
+    {
+      "session_id": "0ec99ce96_Session_6",
+      "user": "0ec99ce96",
+      "AchievingGroup": "Low achiever",
+      "event_count": 36,
+      "action_path": "Instructions -> Group_work -> Course_view -> Course_view -> Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Course_view -> Course_view -> Instructions"
+    },
+    {
+      "session_id": "e06debeb8_Session_39",
+      "user": "e06debeb8",
+      "AchievingGroup": "High achiever",
+      "event_count": 36,
+      "action_path": "Course_view -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work -> Group_work"
+    }
+  ]
+}

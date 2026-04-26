@@ -1,7 +1,7 @@
 {
   "project": {
     "title": "Student Success Prediction Dashboard",
-    "generated_at": "2026-04-24 10:40:04",
+    "generated_at": "2026-04-25 08:45:32",
     "backend": "Python",
     "source_chapter": "Chapter 07",
     "source_qmd": "ch07-prediction.qmd",
@@ -199,6 +199,148 @@
         "model": "regression"
       }
     ]
+  },
+  "manual_demo": {
+    "feature_order": [
+      "action_cnt_Materials_Applications",
+      "entropy_session_len",
+      "session_cnt",
+      "action_cnt_Course_view",
+      "action_cnt_Group_work",
+      "entropy_daily_cnts"
+    ],
+    "field_schema": [
+      {
+        "name": "action_cnt_Materials_Applications",
+        "label": "Applications Material Views",
+        "default": 0.0,
+        "min": 0.0,
+        "max": 35.0,
+        "step": 1,
+        "description": "Observed range: 0.00 to 35.00"
+      },
+      {
+        "name": "entropy_session_len",
+        "label": "Session-Length Entropy",
+        "default": 3.65,
+        "min": 1.87,
+        "max": 5.0,
+        "step": 0.01,
+        "description": "Observed range: 1.87 to 5.00"
+      },
+      {
+        "name": "session_cnt",
+        "label": "Session Count",
+        "default": 28.5,
+        "min": 9.0,
+        "max": 75.0,
+        "step": 1,
+        "description": "Observed range: 9.00 to 75.00"
+      },
+      {
+        "name": "action_cnt_Course_view",
+        "label": "Course Page Views",
+        "default": 119.5,
+        "min": 26.0,
+        "max": 731.0,
+        "step": 1,
+        "description": "Observed range: 26.00 to 731.00"
+      },
+      {
+        "name": "action_cnt_Group_work",
+        "label": "Group Work Actions",
+        "default": 204.5,
+        "min": 15.0,
+        "max": 751.0,
+        "step": 1,
+        "description": "Observed range: 15.00 to 751.00"
+      },
+      {
+        "name": "entropy_daily_cnts",
+        "label": "Daily Activity Entropy",
+        "default": 3.83,
+        "min": 2.47,
+        "max": 4.74,
+        "step": 0.01,
+        "description": "Observed range: 2.47 to 4.74"
+      }
+    ],
+    "classification_model": {
+      "imputer": [
+        0.0,
+        3.645646,
+        28.5,
+        119.5,
+        204.5,
+        3.832003
+      ],
+      "scaler_mean": [
+        3.730769,
+        3.623243,
+        34.253846,
+        151.169231,
+        217.753846,
+        3.778866
+      ],
+      "scaler_scale": [
+        6.653846,
+        0.73278,
+        17.604331,
+        124.717227,
+        147.846961,
+        0.544011
+      ],
+      "coefficients": [
+        -1.518058,
+        -0.895882,
+        -0.306862,
+        0.365813,
+        0.107439,
+        0.330344
+      ],
+      "intercept": -0.222296
+    },
+    "regression_model": {
+      "imputer": [
+        0.0,
+        3.645646,
+        28.5,
+        119.5,
+        204.5,
+        3.832003
+      ],
+      "scaler_mean": [
+        3.730769,
+        3.623243,
+        34.253846,
+        151.169231,
+        217.753846,
+        3.778866
+      ],
+      "scaler_scale": [
+        6.653846,
+        0.73278,
+        17.604331,
+        124.717227,
+        147.846961,
+        0.544011
+      ],
+      "coefficients": [
+        0.541485,
+        1.225133,
+        -0.214525,
+        -0.64851,
+        0.463301,
+        0.219982
+      ],
+      "intercept": 7.253896
+    },
+    "cohort": {
+      "average_grade": 7.25,
+      "median_grade": 7.95,
+      "high_risk_threshold": 0.66,
+      "medium_risk_threshold": 0.33
+    }
   },
   "students": [
     {
